@@ -18,7 +18,10 @@ $breakpoint-fullhd: 300px + (2 * $gap);
 $breakpoint-tablet: 720px + (2 * $gap);
 
 // Container widths
-$container-width: 800px;
+$container-width: 970px;
+
+// Margins
+$margin: 15px;
 
 // Animations
 $time: 0.2s;

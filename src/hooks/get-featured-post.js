@@ -1,40 +1,23 @@
-// import { useStaticQuery, graphql } from "gatsby"
-
-// export const GetFeaturedPost = () => {
-//   const post = useStaticQuery(
-//     graphql`
-//       {
-//         allWordpressPost(filter: { sticky: { eq: true } }, limit: 1) {
-//           edges {
-//             node {
-//               title
-//             }
-//           }
-//         }
-//       }
-//     `
-//   )
-
-//   return post.allWordPressPost
-// }
-
-import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-const getFeaturedPost = () => {
-  const data = useStaticQuery(graphql`
-    query FeaturedPost {
-      allWordpressPost(filter: { sticky: { eq: true } }, limit: 1) {
-        edges {
-          node {
-            title
+export const useFeaturedPosts = () => {
+  const posts = useStaticQuery(
+    graphql`
+      {
+        allWordpressPost(filter: { sticky: { eq: true } }) {
+          edges {
+            node {
+              title
+              slug
+              excerpt
+              sticky
+              jetpack_featured_media_url
+            }
           }
         }
       }
-    }
-  `)
+    `
+  )
 
-  return data.allWordPressPost
+  return posts.allWordpressPost
 }
-
-export default getFeaturedPost
