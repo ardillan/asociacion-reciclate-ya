@@ -29,7 +29,7 @@ Sitio web para la asociación Recíclate YA. Construido bajo GatsbyJS y WordPres
 
 ### Front
 
-Esta web renderiza su contenido gracias a ReactJS, una librería para crear interfaces basads en componentes. Puedes aprender a usarlo en [su página oficial](https://reactjs.org/tutorial/tutorial.html).
+Esta web renderiza su contenido gracias a ReactJS, una librería para crear interfaces basadas en componentes. Puedes aprender a usarlo en [su página oficial](https://reactjs.org/tutorial/tutorial.html).
 
 ### Back
 
