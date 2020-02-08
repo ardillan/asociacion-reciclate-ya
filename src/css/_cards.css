@@ -12,5 +12,10 @@
 
   .excerpt {
     color: $text-dark;
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 70px;
   }
 }
