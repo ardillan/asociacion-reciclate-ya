@@ -1,11 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Aside from "../components/aside"
 import SEO from "../components/seo"
 import FeaturedPosts from "../components/featuredPosts"
+import PostsList from "../components/postList"
 
 export default ({ data }) => {
   return (
@@ -25,31 +25,9 @@ export default ({ data }) => {
           </p>
         </div>
         <h1>Entradas</h1>
-        <ul className="featured-posts">
-          {data.allWordpressPost.edges.slice(0, 2).map((post, index) => {
-            return (
-              <li key={index}>
-                <article className="card">
-                  <Link to={`/${post.node.slug}`}>
-                    <header>
-                      <img
-                        src={post.node.jetpack_featured_media_url}
-                        alt={post.node.title}
-                      />
-                      <h2
-                        dangerouslySetInnerHTML={{ __html: post.node.title }}
-                      />
-                    </header>
-                    <div
-                      className="excerpt"
-                      dangerouslySetInnerHTML={{ __html: post.node.excerpt }}
-                    />
-                  </Link>
-                </article>
-              </li>
-            )
-          })}
-        </ul>
+        <PostsList category="all" />
+        <h1>Salidas en bici</h1>
+        <PostsList category="salida" />
       </section>
     </Layout>
   )
