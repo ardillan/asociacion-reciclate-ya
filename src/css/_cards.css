@@ -4,6 +4,7 @@
     height: 180px;
     object-fit: cover;
   }
+
   h2 {
     color: $text-dark;
     font-size: 1.3rem;

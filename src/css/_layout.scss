@@ -28,20 +28,6 @@ header {
   }
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  aside {
-    flex: 15vw 0;
-    padding: 20px 0px;
-    min-height: 450px;
-    margin-right: 20px;
-    ul {
-      margin-bottom: 20px;
-    }
-  }
-}
-
 section {
   &.main-banner {
     width: 100%;
@@ -49,6 +35,9 @@ section {
     border-radius: $radius;
     display: flex;
     align-items: center;
+    background-size: cover;
+    margin-top: $margin;
+    margin-bottom: $margin;
   }
 
   &.main-content {
@@ -63,7 +52,7 @@ section {
   padding: 30px 30px;
   border-radius: $radius;
   background: #0065ff08;
-  margin-bottom: $margin;
+  margin-bottom: $margin * 2;
 }
 
 .featured-posts {
@@ -71,6 +60,7 @@ section {
   align-content: space-between;
   justify-content: initial;
   column-gap: 30px;
+  margin-bottom: 50px;
 
   li {
     width: calc(100% / 2);
