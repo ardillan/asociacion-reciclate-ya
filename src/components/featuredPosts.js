@@ -7,10 +7,9 @@ const FeaturedPosts = () => {
 
   return (
     <section
-      className="main-banner"
+      className="main-banner column is-12"
       style={{
         backgroundImage: `url(${featuredPosts.jetpack_featured_media_url})`,
-        backgroundSize: `cover`,
       }}
     >
       <div className="columns is-vcentered is-multiline">

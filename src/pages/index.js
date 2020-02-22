@@ -11,24 +11,26 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <FeaturedPosts />
-      <Aside />
-      <section className="main-content">
-        <div className="featured-content">
-          <h2>Asociación Recíclate YA</h2>
-          <p>
-            Somos una asociación sin ánimo de lucro que trata de mejorar la
-            movilidad de nuestro entorno mediante el uso de la movilidad
-            sostenible. Mantenemos en uso bicicletas que nos ceden, las ponemos
-            a punto y se las prestamos a la gente: lo llamamos Bicicleteca; una
-            "biblioteca" de bicis.
-          </p>
-        </div>
-        <h1>Entradas</h1>
-        <PostsList category="all" />
-        <h1>Salidas en bici</h1>
-        <PostsList category="salida" />
-      </section>
+      <div className="columns is-multiline">
+        <FeaturedPosts />
+        <Aside />
+        <section className="column is-9">
+          <div className="featured-content">
+            <h2>Asociación Recíclate YA</h2>
+            <p>
+              Somos una asociación sin ánimo de lucro que trata de mejorar la
+              movilidad de nuestro entorno mediante el uso de la movilidad
+              sostenible. Mantenemos en uso bicicletas que nos ceden, las
+              ponemos a punto y se las prestamos a la gente: lo llamamos
+              Bicicleteca; una "biblioteca" de bicis.
+            </p>
+          </div>
+          <h1>Entradas</h1>
+          <PostsList category="all" />
+          <h1>Salidas en bici</h1>
+          <PostsList category="salida" />
+        </section>
+      </div>
     </Layout>
   )
 }

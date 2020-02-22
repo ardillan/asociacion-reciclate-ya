@@ -2,7 +2,7 @@ import React from "react"
 
 export default () => {
   return (
-    <aside>
+    <aside className="column is-3 is-paddingless">
       <h2>Sobre nosotros</h2>
       <ul>
         <li>¿Qué es Recíclate Ya?</li>
