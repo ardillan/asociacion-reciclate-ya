@@ -9,6 +9,10 @@
 .container {
   max-width: $container-width;
   margin: auto;
+
+  @media (max-width: $breakpoint-desktop) {
+    padding: 2rem;
+  }
 }
 
 header {
@@ -23,6 +27,24 @@ header {
       font-size: 1rem;
       text-transform: uppercase;
       a {
+        color: $text-dark;
+        &:hover {
+          background: initial;
+          color: $blue-dark;
+          text-decoration: underline;
+          text-decoration-color: $blue-dark;
+          text-decoration-thickness: 3px;
+          text-underline-offset: 5px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-desktop) {
+    &#main-header {
+      padding: 0 2rem;
+      ul {
+        justify-content: center;
       }
     }
   }
@@ -64,6 +86,22 @@ section {
 
   li {
     width: calc(100% / 2);
+  }
+}
+
+.post {
+  img {
+    margin-bottom: $margin;
+  }
+
+  .content {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  @media (max-width: $breakpoint-desktop) {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 

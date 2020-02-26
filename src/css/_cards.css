@@ -1,4 +1,6 @@
 .card {
+  padding: 2rem;
+  margin: -2rem;
   img {
     width: 100%;
     height: 180px;
@@ -18,5 +20,19 @@
     word-wrap: break-word;
     overflow: hidden;
     max-height: 70px;
+  }
+
+  &:hover {
+    transition: all $time $ease;
+    header {
+      img,
+      h2 {
+        opacity: 0.5;
+      }
+    }
+
+    .excerpt {
+      opacity: 0.5;
+    }
   }
 }
