@@ -4,7 +4,10 @@ export const useFeaturedPosts = () => {
   const posts = useStaticQuery(
     graphql`
       {
-        allWordpressPost(filter: { sticky: { eq: true } }) {
+        allWordpressPost(
+          filter: { sticky: { eq: true } }
+          sort: { fields: id }
+        ) {
           edges {
             node {
               title
