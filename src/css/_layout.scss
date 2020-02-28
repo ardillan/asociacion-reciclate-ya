@@ -78,11 +78,7 @@ section {
 }
 
 .featured-posts {
-  display: flex;
-  align-content: space-between;
-  justify-content: initial;
-  column-gap: 30px;
-  margin-bottom: 50px;
+  margin-bottom: $margin * 2;
 
   li {
     width: calc(100% / 2);
