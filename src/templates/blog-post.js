@@ -7,19 +7,20 @@ export default ({ data }) => {
   return (
     <Layout>
       <div className="columns is-multiline post">
-        <Aside />
-        <div className="column is-8-desktop is-12-mobile">
-          <img
-            src={post.jetpack_featured_media_url}
-            style={{ width: `100%`, height: 300 }}
-            alt={post.title}
-          />
-          <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
-
-          <div
-            className="content"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+        <div className="column is-12 post-image">
+          <img src={post.jetpack_featured_media_url} alt={post.title} />
+        </div>
+        <div className="column is-12">
+          <div className="columns main-content">
+            <Aside />
+            <div className="column is-9">
+              <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+              <div
+                className="content"
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

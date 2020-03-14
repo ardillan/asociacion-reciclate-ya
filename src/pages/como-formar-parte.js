@@ -3,12 +3,11 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Aside from "../components/aside"
-import PostsList from "../components/postList"
 
 export default () => {
   return (
     <Layout>
-      <SEO title="Recíclate Ya | Blog" />
+      <SEO title="Blog" />
       <section className="columns">
         <div className="column is-12">
           <img
@@ -21,8 +20,12 @@ export default () => {
       <section className="columns is-multiline">
         <Aside />
         <div className="column is-9">
-          <h1>Blog</h1>
-          <PostsList length="20" category="all" />
+          <h1>¿Cómo puedo formar parte?</h1>
+
+          <p>
+            Asociándote, ser socio cuesta 10€ al año. De esta manera podrás
+            disfrutar de nuestra <strong>bicicleteca</strong>
+          </p>
         </div>
       </section>
     </Layout>

@@ -10,12 +10,14 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+ul {
   margin-bottom: $margin;
 }
 
 h1 {
   font-size: 2rem;
+  line-height: 2.3rem;
   font-weight: 800;
 }
 
@@ -26,9 +28,13 @@ h2 {
 a {
   text-decoration: none;
   color: $blue-dark;
-  margin-right: 15px;
+  text-decoration: underline;
+  text-decoration-color: $blue-light;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
   &:hover {
     background: $blue-light;
+    text-decoration-color: $blue-dark;
   }
 }
 

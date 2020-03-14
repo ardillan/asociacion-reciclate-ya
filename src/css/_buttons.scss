@@ -3,4 +3,8 @@
   background: $blue-dark;
   border-radius: 50px;
   color: $white;
+
+  &:hover {
+    background: $blue-darkest;
+  }
 }

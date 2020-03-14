@@ -15,10 +15,48 @@
   }
 }
 
+aside {
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: $text-dark;
+    text-decoration: none;
+  }
+
+  p,
+  address,
+  a,
+  li {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    border-top: 1px dashed $blue-dark;
+    margin-top: $margin;
+    padding-top: $margin;
+
+    p,
+    address,
+    a,
+    li {
+      font-size: initial;
+      line-height: initial;
+    }
+  }
+}
+
 header {
   &#main-header {
     margin-bottom: 15px;
     background: white;
+
     ul {
       max-width: $container-width;
       margin: auto;
@@ -28,6 +66,8 @@ header {
       text-transform: uppercase;
       a {
         color: $text-dark;
+        margin-right: 1rem;
+        text-decoration: none;
         &:hover {
           background: initial;
           color: $blue-dark;
@@ -60,12 +100,27 @@ section {
     background-size: cover;
     margin-top: $margin;
     margin-bottom: $margin;
-  }
 
-  &.main-content {
-    flex: 1;
-    min-height: 450px;
-    padding: 20px 0px;
+    a {
+      text-decoration: none;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      text-align: center;
+      margin-top: -50px;
+      margin-left: -20px;
+      border-radius: 0;
+      width: 100vw;
+    }
+  }
+}
+
+.main-content {
+  display: flex;
+
+  @media (max-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -92,12 +147,27 @@ section {
 
   .content {
     font-size: 1.2rem;
-    line-height: 1.6rem;
+    line-height: 1.8rem;
+  }
+  .post-image {
+    img {
+      width: 100vw;
+      object-fit: cover;
+    }
   }
 
-  @media (max-width: $breakpoint-desktop) {
-    display: flex;
-    flex-direction: column-reverse;
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: -50px;
+    .post-image {
+      width: 100vw;
+      margin-left: -20px;
+      padding: 0px;
+
+      img {
+        height: 300px;
+        // width: 100vw;
+      }
+    }
   }
 }
 

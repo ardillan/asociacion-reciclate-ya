@@ -3,12 +3,11 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Aside from "../components/aside"
-import PostsList from "../components/postList"
 
 export default () => {
   return (
     <Layout>
-      <SEO title="Recíclate Ya | Blog" />
+      <SEO title="Recíclate Ya | Cómo colaborar" />
       <section className="columns">
         <div className="column is-12">
           <img
@@ -21,8 +20,21 @@ export default () => {
       <section className="columns is-multiline">
         <Aside />
         <div className="column is-9">
-          <h1>Blog</h1>
-          <PostsList length="20" category="all" />
+          <h1>¿Cómo puedo colaborar?</h1>
+          <p>
+            {" "}
+            Donando una bici de las que lleva años en un trastero sin usarse
+            (esté bien o esté mal). De este modo pasará a circular todos los
+            días y algún asociado podrá disfrutar de tu donación.
+          </p>
+          <p>
+            Acompañándonos en los distintos actos que realiza la Asociación:
+            Salidas en Bici, charlas...
+          </p>
+          <p>
+            Comprando papeletas para el sorteo de una bici que realizamos todos
+            los años.
+          </p>
         </div>
       </section>
     </Layout>

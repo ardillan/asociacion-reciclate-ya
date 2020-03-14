@@ -11,6 +11,10 @@
     font-weight: 400;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   .excerpt {
     color: $text-dark;
     display: block;

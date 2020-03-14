@@ -9,10 +9,10 @@ const PostsList = props => {
   const posts = props.category === "all" ? allPosts : allPostsCategory
 
   return (
-    <ul className="featured-posts">
-      {posts.edges.slice(0, 2).map((post, index) => {
+    <ul className="featured-posts columns is-multiline">
+      {posts.edges.slice(0, props.length).map((post, index) => {
         return (
-          <li key={index}>
+          <li key={index} className="column is-6-desktop is-12-mobile">
             <article className="card">
               <Link to={`/${post.node.slug}`}>
                 <header>

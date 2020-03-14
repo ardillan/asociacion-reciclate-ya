@@ -3,12 +3,11 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Aside from "../components/aside"
-import PostsList from "../components/postList"
 
 export default () => {
   return (
     <Layout>
-      <SEO title="Recíclate Ya | Blog" />
+      <SEO title="Recíclate Ya | Actividades" />
       <section className="columns">
         <div className="column is-12">
           <img
@@ -21,8 +20,19 @@ export default () => {
       <section className="columns is-multiline">
         <Aside />
         <div className="column is-9">
-          <h1>Blog</h1>
-          <PostsList length="20" category="all" />
+          <h1>Actividades que realizamos</h1>
+
+          <ul>
+            <li>
+              ▸ Desarrollo y apoyo a todos los actos de movilidad sostenible que
+              se realicen.
+            </li>
+            <li>▸ Taller de reparación de bicicletas (self-service).</li>
+            <li>▸ Préstamo de bicicletas.</li>
+            <li>▸ Educación vial.</li>
+            <li>▸ Integración social.</li>
+            <li>▸ Salidas cicloturistas.</li>
+          </ul>
         </div>
       </section>
     </Layout>
