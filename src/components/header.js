@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import React, { useState } from "react"
 
 const Header = ({ data }) => {
-  const [isActive, setisActive] = React.useState(false)
+  const [isActive, setisActive] = useState(false)
 
   const logo = useStaticQuery(graphql`
     {
