@@ -2,14 +2,14 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import React, { useState } from "react"
 
-const Header = ({ data }) => {
+const Header = () => {
   const [isActive, setisActive] = useState(false)
 
   const logo = useStaticQuery(graphql`
     {
       file(name: { eq: "logotipo" }) {
         childImageSharp {
-          fixed(height: 30) {
+          fixed(height: 30, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -49,6 +49,9 @@ const Header = ({ data }) => {
             </Link>
             <Link className="navbar-item" to="/blog">
               Blog
+            </Link>
+            <Link className="navbar-item" to="/nuestros-amigos">
+              Nuestros amigos
             </Link>
           </div>
         </div>
