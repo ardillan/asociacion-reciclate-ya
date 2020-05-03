@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "name": "Ayuntamiento de Torrelavega",
+      "image": "ayuntamiento_torrelavega.png",
+      "url": "http://www.torrelavega.es/"
+    },
+    {
+      "name": "ASOBE (Asociación de Sordos del Besaya)",
+      "image": "asobe.png",
+      "url": "http://www.fescan.es/index.php?option=com_content&view=article&id=72&Itemid=91"
+    },
+    {
+      "name": "CIMA",
+      "image": "cima.png",
+      "url": "https://www.miteco.gob.es/es/ceneam/recursos/quien-es-quien/cima.aspx"
+    },
+    {
+      "name": "DGT",
+      "image": "dgt.png",
+      "url": "https://www.dgt.es/es/"
+    }
+  ]
+}
