@@ -57,6 +57,10 @@ header {
     margin-bottom: 15px;
     background: white;
 
+    .navbar-item img {
+      max-height: initial;
+    }
+
     ul {
       max-width: $container-width;
       margin: auto;
