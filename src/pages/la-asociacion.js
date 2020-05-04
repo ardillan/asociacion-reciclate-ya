@@ -4,9 +4,30 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Aside from "../components/aside"
 
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 export default () => {
+  const data = useStaticQuery(graphql`
+    {
+      allFile(filter: { relativePath: { regex: "/historia/" } }) {
+        edges {
+          node {
+            name
+            id
+            childImageSharp {
+              fluid(maxHeight: 300, quality: 100) {
+                src
+                originalName
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <SEO title="La asociación" />
@@ -44,19 +65,32 @@ export default () => {
             También queremos que sirva para animar y apoyar a otros colectivos a
             crear asociaciones similares en otras localidades.
           </p>
-          <h2>Emplazamiento</h2>
+          <h2>
+            <a href="#emplazamiento" id="emplazamiento" className="anchor">
+              Emplazamiento
+            </a>
+          </h2>
           <p>Nuestro local está situado en: </p>
           <address>
             Calle Carrera 8, bajo (pegado a la plaza de la Llama), en
             Torrelavega, Cantabria, España.
           </address>
           <br />
-          <h2>Horario</h2>
+          <h2>
+            <a href="#horario" id="horario" className="anchor">
+              Horario
+            </a>
+          </h2>
           <p>
             Abrimos los <strong>martes</strong> y <strong>jueves</strong> de
             19:00 horas a 21:00 horas.
           </p>
-          <h2>Contacto</h2>
+          <h2>
+            {" "}
+            <a href="#contacto" id="contacto" className="anchor">
+              Contacto
+            </a>
+          </h2>
           <ul>
             <li>
               <a
@@ -80,14 +114,24 @@ export default () => {
               </a>
             </li>
           </ul>
-          <h2>¿Cómo puedo formar parte?</h2>
+          <h2>
+            {" "}
+            <a href="#formar_parte" id="formar_parte" className="anchor">
+              ¿Cómo puedo formar parte?
+            </a>
+          </h2>
           <p>
             Haciéndote socio, la <strong>cuota anual de socio es de 10€</strong>{" "}
             y un socio hace partícipe a toda su familia. De esta manera, podrás
             beneficiarte de los servicios que proporcionamos y participar en
             todas nuestras actividades.
           </p>
-          <h2>¿Cómo puedo colaborar?</h2>
+          <h2>
+            {" "}
+            <a href="#colaborar" id="colaborar" className="anchor">
+              ¿Cómo puedo colaborar?
+            </a>
+          </h2>
           <p>
             Donando una bici que no uses, no importa su estado. La pondremos a
             punto y algún asociado podrá disfrutar de ella. Aceptamos recambios,
@@ -127,6 +171,20 @@ export default () => {
             el número de bicicletas prestadas. En enero de 2020 contábamos con
             155 socios y 110 bicicletas prestadas.
           </p>
+          <div
+            style={{
+              display: `grid`,
+              columnGap: 20 /* [1] Add some gap between rows and columns */,
+              rowGap: 20,
+              gridTemplateColumns: `repeat( auto-fill, minmax( 200px, 1fr ) )` /* [2] Make columns adjust according to the available viewport */,
+              gridAutoRows: 250,
+              marginBottom: 20,
+            }}
+          >
+            {data.allFile.edges.map(value => {
+              return <Img fluid={value.node.childImageSharp.fluid} />
+            })}
+          </div>
           <p>
             Las actividades más destacadas realizadas durante estos años han
             sido:

@@ -1,3 +1,7 @@
+:root {
+  scroll-behavior: smooth;
+}
+
 .background-decoration {
   background-image: linear-gradient(to bottom, #4689fe, #0099fd);
   height: 250px;
@@ -17,7 +21,8 @@
 
 aside {
   h2 {
-    margin-bottom: 0.5rem;
+    font-size: initial;
+    margin-bottom: 0.9rem;
   }
 
   a {
@@ -120,7 +125,20 @@ section {
 
 .main-content {
   display: flex;
-
+  .anchor {
+    text-decoration: none;
+    color: initial;
+    &:hover {
+      &:before {
+        content: "🔗";
+        position: absolute;
+        margin-left: -30px;
+      }
+    }
+  }
+  ul {
+    list-style: initial;
+  }
   @media (max-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
     display: flex;
     flex-direction: column-reverse;
