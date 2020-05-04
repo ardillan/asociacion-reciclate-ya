@@ -30,7 +30,7 @@ export default () => {
 
   return (
     <Layout>
-      <SEO title="La asociación" />
+      <SEO title="La asociación | Recíclate Ya" />
       <section className="columns">
         <div className="column is-12">
           <img

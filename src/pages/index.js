@@ -10,7 +10,7 @@ import PostsList from "../components/postList"
 export default ({ data }) => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Inicio | Recíclate YA" />
       <div className="columns is-multiline">
         <FeaturedPosts />
         <div className="main-content">

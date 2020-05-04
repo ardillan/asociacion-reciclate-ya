@@ -7,7 +7,7 @@ import Aside from "../components/aside"
 export default () => {
   return (
     <Layout>
-      <SEO title="La asociación" />
+      <SEO title="Salidas | Recíclate YA" />
       <section className="columns">
         <div className="column is-12">
           <img
