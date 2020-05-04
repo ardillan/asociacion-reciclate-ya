@@ -16,9 +16,19 @@
       "url": "https://www.miteco.gob.es/es/ceneam/recursos/quien-es-quien/cima.aspx"
     },
     {
+      "name": "Agricultores Solidarios",
+      "image": "agricultores_solidarios.png",
+      "url": "http://www.agricultoressolidarios.org/"
+    },
+    {
       "name": "DGT",
       "image": "dgt.png",
       "url": "https://www.dgt.es/es/"
+    },
+    {
+      "name": "30 días en bici",
+      "image": "30_dias_en_bici.png",
+      "url": "https://www.30diasenbici.com/"
     }
   ]
 }
