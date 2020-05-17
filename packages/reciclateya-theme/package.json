@@ -1,0 +1,13 @@
+{
+  "name": "reciclateya-theme",
+  "version": "1.0.0",
+  "description": "Tema de Frontity creado para la Asociación Recíclate YA",
+  "keywords": [
+    "frontity",
+    "reciclateya-theme"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "frontity": "^1.6.0"
+  }
+}
