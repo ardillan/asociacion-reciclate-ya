@@ -27,6 +27,7 @@ const settings = {
           api:
             "https://public-api.wordpress.com/wp/v2/sites/asociacionreciclateya.wordpress.com",
         },
+        postsPage: "/blog/",
       },
     },
     "@frontity/tiny-router",

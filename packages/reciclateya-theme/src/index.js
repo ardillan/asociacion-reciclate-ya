@@ -9,7 +9,6 @@ export default {
     theme: {
       isMenuOpen: false,
     },
-    posts: frontity.state.source.post,
   },
   actions: {
     theme: {

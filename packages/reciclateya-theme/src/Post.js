@@ -1,15 +1,18 @@
 import React from "react";
-import { connect } from "frontity";
+import { connect, styled } from "frontity";
 
 const Post = ({ state }) => {
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
-
   return (
-    <div>
+    <Container>
       <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-    </div>
+    </Container>
   );
 };
 
 export default connect(Post);
+
+const Container = styled.div`
+  margin: 20px;
+`;

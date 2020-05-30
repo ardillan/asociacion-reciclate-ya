@@ -1,7 +1,15 @@
 import React from "react";
 import { connect, styled } from "frontity";
 
-const Link = ({ href, actions, children }) => {
+const Link = ({ href, actions, children, color }) => {
+  const AnchorColor = color === "initial" ? "initial" : "orange";
+
+  const Anchor = styled.a`
+    color: ${AnchorColor};
+    text-decoration: none;
+    font-family: ;
+  `;
+
   return (
     <div>
       <Anchor
@@ -19,7 +27,3 @@ const Link = ({ href, actions, children }) => {
 };
 
 export default connect(Link);
-
-const Anchor = styled.a`
-  color: steelblue;
-`;

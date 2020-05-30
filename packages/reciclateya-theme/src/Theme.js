@@ -14,7 +14,6 @@ const Theme = () => {
             font-size: 20px;
             max-width: 800px;
             margin: auto;
-            padding: 1em;
           }
           h1,
           h2,
