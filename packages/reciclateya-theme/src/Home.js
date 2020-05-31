@@ -6,18 +6,23 @@ const Home = ({ state, posts }) => {
   const keys = Object.keys(posts);
 
   return (
-    <Container>
+    <>
       <MainHeader></MainHeader>
       <Items>
         {keys.slice(0, 3).map((id) => {
           return (
-            <Link href={posts[id].link} key={id}>
+            <Link href={posts[id].link} color="initial" key={id}>
               {posts[id].title.rendered}
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: posts[id].excerpt.rendered,
+                }}
+              />
             </Link>
           );
         })}
       </Items>
-    </Container>
+    </>
   );
 };
 
@@ -30,13 +35,20 @@ const MainHeader = styled.div`
 `;
 
 const Items = styled.div`
-  & > div {
-    margin: 16px 0;
-    font-size: 1.2em;
-    color: lime;
-  }
-`;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: space-around;
+  padding: 20px;
+  column-gap: 20px;
 
-const Container = styled.div`
-  margin: 20px;
+  div {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  p {
+    font-size: 1rem;
+    font-family: "Noticia Text";
+  }
 `;

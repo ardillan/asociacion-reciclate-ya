@@ -7,7 +7,7 @@ const Link = ({ href, actions, children, color }) => {
   const Anchor = styled.a`
     color: ${AnchorColor};
     text-decoration: none;
-    font-family: ;
+    font-family: "Barlow";
   `;
 
   return (

@@ -22,6 +22,9 @@ const Header = ({ state }) => {
         <Link href="/blog/" color="initial">
           Blog
         </Link>
+        <Link href="/nuestros-amigos/" color="initial">
+          Nuestros amigos
+        </Link>
       </Navigation>
     </header>
   );
@@ -30,11 +33,9 @@ const Header = ({ state }) => {
 export default connect(Header);
 
 const Navigation = styled.nav`
-  width: 100%;
+  max-width: 50%;
   text-align: center;
   display: flex;
-  width: 90%;
-  max-width: 300px;
   justify-content: space-between;
 
   a {

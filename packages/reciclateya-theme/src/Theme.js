@@ -12,8 +12,8 @@ const Theme = () => {
             font-family: "Noticia Text";
             font-weight: 400;
             font-size: 20px;
-            max-width: 800px;
             margin: auto;
+            color: #1f1c35;
           }
           h1,
           h2,
