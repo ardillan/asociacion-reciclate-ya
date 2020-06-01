@@ -14,6 +14,8 @@ const Theme = () => {
             font-size: 20px;
             margin: auto;
             color: #1f1c35;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
           }
           h1,
           h2,

@@ -9,10 +9,15 @@ const Header = ({ state }) => {
     <header
       css={css`
         background: #fff9d8;
-        padding: 20px;
+        padding: 40px 20px;
       `}
     >
-      <Navigation>
+      <Navigation
+        css={css`
+          width: ${state.theme.screenSizes.desktop};
+          margin: auto;
+        `}
+      >
         <Link href="/" color="initial">
           Inicio
         </Link>
@@ -33,13 +38,12 @@ const Header = ({ state }) => {
 export default connect(Header);
 
 const Navigation = styled.nav`
-  max-width: 50%;
   text-align: center;
   display: flex;
-  justify-content: space-between;
 
   a {
     font-family: "Barlow";
-    font-weight: 400;
+    font-weight: 600;
+    padding-right: 20px;
   }
 `;

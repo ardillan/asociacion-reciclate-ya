@@ -1,8 +1,51 @@
 import React from "react";
-import { connect, styled } from "frontity";
+import { connect, styled, css } from "frontity";
 import Link from "./components/Link";
+import { renderText } from "./utils/helpers";
 
 const Home = ({ state, posts }) => {
+  const Items = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    margin-top: 20px;
+    align-items: space-around;
+    padding: 20px;
+    width: ${state.theme.screenSizes.desktop};
+    margin: auto;
+    h2 {
+      font-size: 25px;
+      font-weight: 600;
+    }
+
+    div {
+    }
+
+    p {
+      font-size: 1rem;
+      font-family: "Noticia Text";
+    }
+
+    @media (max-width: ${state.theme.screenSizes.desktop}) {
+      width: auto;
+      grid-template-columns: 1fr;
+    }
+  `;
+
+  const MainHeader = styled.div`
+    min-height: 300px;
+    background: pink;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+    p,
+    h2 {
+      margin: 0;
+    }
+  `;
+
   const keys = Object.keys(posts);
 
   let stickyPosts = [];
@@ -23,24 +66,40 @@ const Home = ({ state, posts }) => {
 
   getStickyPosts();
 
+  const Container = styled.div`
+    width: ${state.theme.screenSizes.desktop};
+    margin: auto;
+  `;
+
   return (
     <>
       <MainHeader>
-        <Link href={stickyPosts[0].link} color="initial">
-          <h2>{stickyPosts[0].title.rendered}</h2>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: stickyPosts[0].excerpt.rendered,
-            }}
-          />
-        </Link>
+        <Container>
+          <Link href={stickyPosts[0].link} color="initial">
+            <div
+              css={css`
+                width: 450px;
+              `}
+            >
+              <h2>{renderText(stickyPosts[0].title.rendered)}</h2>
+              <div
+                css={css`
+                  font-family: "Noticia Text";
+                `}
+                dangerouslySetInnerHTML={{
+                  __html: stickyPosts[0].excerpt.rendered,
+                }}
+              />
+            </div>
+          </Link>
+        </Container>
       </MainHeader>
       <Items>
         {keys.slice(0, 3).map((id) => {
           console.log();
           return (
             <Link href={posts[id].link} color="initial" key={id}>
-              <h2>{posts[id].title.rendered}</h2>
+              <h2>{renderText(posts[id].title.rendered)}</h2>
               <div
                 dangerouslySetInnerHTML={{
                   __html: posts[id].excerpt.rendered,
@@ -55,33 +114,3 @@ const Home = ({ state, posts }) => {
 };
 
 export default connect(Home);
-
-const MainHeader = styled.div`
-  height: 300px;
-  background: pink;
-  margin: 0;
-`;
-
-const Items = styled.div`
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: space-around;
-  padding: 20px;
-  column-gap: 20px;
-
-  h2 {
-    font-size: 25px;
-    font-weight: 400;
-  }
-
-  div {
-    flex-grow: 1;
-    flex-basis: 0;
-  }
-
-  p {
-    font-size: 1rem;
-    font-family: "Noticia Text";
-  }
-`;
