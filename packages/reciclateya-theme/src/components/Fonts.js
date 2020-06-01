@@ -1,11 +1,11 @@
 import React from "react";
 import { Global, css } from "frontity";
 
-import BarlowRegular from "../assets/fonts/barlow/Barlow-Regular.ttf";
-import BarlowSemiBold from "../assets/fonts/barlow/Barlow-SemiBold.ttf";
-import BarlowBold from "../assets/fonts/barlow/Barlow-Bold.ttf";
-import NoticiaTextRegular from "../assets/fonts/noticia_text/NoticiaText-Regular.ttf";
-import NoticiaTextBold from "../assets/fonts/noticia_text/NoticiaText-Bold.ttf";
+import BarlowRegular from "../../assets/fonts/barlow/Barlow-Regular.ttf";
+import BarlowSemiBold from "../../assets/fonts/barlow/Barlow-SemiBold.ttf";
+import BarlowBold from "../../assets/fonts/barlow/Barlow-Bold.ttf";
+import NoticiaTextRegular from "../../assets/fonts/noticia_text/NoticiaText-Regular.ttf";
+import NoticiaTextBold from "../../assets/fonts/noticia_text/NoticiaText-Bold.ttf";
 
 const Fonts = () => {
   return (

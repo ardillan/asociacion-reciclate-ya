@@ -1,6 +1,6 @@
 import React from "react";
 import { connect, styled } from "frontity";
-import Link from "./components/Link";
+import Link from "./Link";
 
 const List = ({ state }) => {
   const data = state.source.get(state.router.link);

@@ -1,4 +1,4 @@
-import Root from "./Root";
+import Root from "./components/Root";
 
 export default {
   name: "reciclateya-theme",

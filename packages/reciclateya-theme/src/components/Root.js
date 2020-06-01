@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "frontity";
 
-import Link from "./components/Link";
+import Link from "./Link";
 import Home from "./Home";
 import Post from "./Post";
 import Blog from "./Blog";
 
-import Header from "./components/Header";
+import Header from "./Header";
 
 import Theme from "./Theme";
 
