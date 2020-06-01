@@ -96,7 +96,6 @@ const Home = ({ state, posts }) => {
       </MainHeader>
       <Items>
         {keys.slice(0, 3).map((id) => {
-          console.log();
           return (
             <Link href={posts[id].link} color="initial" key={id}>
               <h2>{renderText(posts[id].title.rendered)}</h2>
