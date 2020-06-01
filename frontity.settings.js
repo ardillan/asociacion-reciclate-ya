@@ -17,6 +17,11 @@ const settings = {
             showOnList: false,
             showOnPost: false,
           },
+          screenSizes: {
+            desktop: "970px",
+            tablet: "480px",
+            mobile: "0px",
+          },
         },
       },
     },
