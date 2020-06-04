@@ -18,7 +18,7 @@ const settings = {
             showOnPost: false,
           },
           screenSizes: {
-            desktop: "970px",
+            desktop: "800px",
             tablet: "480px",
             mobile: "0px",
           },

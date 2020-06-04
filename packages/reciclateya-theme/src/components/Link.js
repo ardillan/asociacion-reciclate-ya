@@ -11,18 +11,17 @@ const Link = ({ href, actions, children, color }) => {
   `;
 
   return (
-    <div>
+    <>
       <Anchor
         href={href}
         onClick={(event) => {
           event.preventDefault();
           actions.router.set(href);
-          actions.theme.closeMenu();
         }}
       >
         {children}
       </Anchor>
-    </div>
+    </>
   );
 };
 
