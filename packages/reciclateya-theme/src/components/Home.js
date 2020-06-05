@@ -3,6 +3,7 @@ import { connect, styled, css } from "frontity";
 import Link from "./Link";
 import { renderText } from "../utils/helpers";
 import Container from "./structure/Container";
+import waveImage from "../../assets/images/background-wave.svg";
 
 const Home = ({ state, posts }) => {
   const Items = styled.div`
@@ -31,8 +32,7 @@ const Home = ({ state, posts }) => {
   `;
 
   const MainHeader = styled.div`
-    min-height: 300px;
-    margin: -50px 0 0 0;
+    height: 100px;
     background-color: ${state.theme.colors.softYellow};
     padding: 20px;
     display: flex;
@@ -42,6 +42,16 @@ const Home = ({ state, posts }) => {
     h2 {
       margin: 0;
     }
+  `;
+
+  const MainHeaderBackground = styled.div`
+    background-image: url("${waveImage}");
+    background-size: 100%;
+    width: 100vw;
+    height: 160px;
+    background-repeat: no-repeat;
+    margin: auto;
+    min-height: calc(10vmax*1.5);
   `;
 
   const keys = Object.keys(posts);
@@ -87,6 +97,7 @@ const Home = ({ state, posts }) => {
           </Link>
         </Container>
       </MainHeader>
+      <MainHeaderBackground />
       <Items>
         {keys.slice(0, 3).map((id) => {
           return (
