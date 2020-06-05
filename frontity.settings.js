@@ -22,6 +22,9 @@ const settings = {
             tablet: "480px",
             mobile: "0px",
           },
+          colors: {
+            softYellow: "#FFF9D8",
+          },
         },
       },
     },

@@ -4,18 +4,34 @@ import { styled, css } from "frontity";
 
 import Link from "./Link";
 
+import waveImage from "../../assets/images/background-wave.svg";
+
 const Header = ({ state }) => {
   return (
     <header
       css={css`
-        background: #fff9d8;
+      background-color:${
+        state.router.link === "/"
+          ? state.theme.colors.softYellow
+          : "transparent"
+      };
+        background-image: url("${waveImage}");
         padding: 40px 20px;
+        background-size: 1400px 120px;
+        background-repeat: no-repeat;
+        background-position: top;
+        min-height: 100px;
       `}
     >
       <Navigation
         css={css`
           width: ${state.theme.screenSizes.desktop};
           margin: auto;
+
+          @media (max-width: ${state.theme.screenSizes.desktop}) {
+            width: auto;
+            grid-template-columns: 1fr;
+          }
         `}
       >
         <Link href="/" color="initial">
