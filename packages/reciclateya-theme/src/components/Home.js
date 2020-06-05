@@ -2,6 +2,7 @@ import React from "react";
 import { connect, styled, css } from "frontity";
 import Link from "./Link";
 import { renderText } from "../utils/helpers";
+import Container from "./structure/Container";
 
 const Home = ({ state, posts }) => {
   const Items = styled.div`
@@ -18,9 +19,6 @@ const Home = ({ state, posts }) => {
       font-weight: 600;
     }
 
-    div {
-    }
-
     p {
       font-size: 1rem;
       font-family: "Noticia Text";
@@ -34,8 +32,8 @@ const Home = ({ state, posts }) => {
 
   const MainHeader = styled.div`
     min-height: 300px;
-    background: pink;
-    margin: 0;
+    margin: -50px 0 0 0;
+    background-color: ${state.theme.colors.softYellow};
     padding: 20px;
     display: flex;
     align-items: center;
@@ -65,11 +63,6 @@ const Home = ({ state, posts }) => {
   };
 
   getStickyPosts();
-
-  const Container = styled.div`
-    width: ${state.theme.screenSizes.desktop};
-    margin: auto;
-  `;
 
   return (
     <>

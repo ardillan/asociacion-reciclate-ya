@@ -1,6 +1,8 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Link from "./Link";
+import { renderText } from "../utils/helpers";
+
 const PostsList = ({ state, libraries }) => {
   const fetchPosts = libraries.source.api.get({ endpoint: "posts" });
   fetchPosts.then((response) => {
@@ -16,7 +18,7 @@ const PostsList = ({ state, libraries }) => {
         {keys.map((id) => {
           return (
             <Link href={posts[id].link} key={id}>
-              {posts[id].title.rendered}
+              {renderText(posts[id].title.rendered)}
             </Link>
           );
         })}

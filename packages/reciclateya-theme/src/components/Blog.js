@@ -1,7 +1,8 @@
 import React from "react";
 import { connect, styled } from "frontity";
-import Link from "./Link";
+
 import PostsList from "./PostsList";
+import Container from "./structure/Container";
 
 const Blog = ({ state }) => {
   return (
@@ -13,7 +14,3 @@ const Blog = ({ state }) => {
 };
 
 export default connect(Blog);
-
-const Container = styled.div`
-  margin: 20px;
-`;
