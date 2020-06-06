@@ -34,18 +34,10 @@ const Header = ({ state }) => {
           }
         `}
       >
-        <Link href="/" color="initial">
-          Inicio
-        </Link>
-        <Link href="/la-asociacion" color="initial">
-          La asociación
-        </Link>
-        <Link href="/blog/" color="initial">
-          Blog
-        </Link>
-        <Link href="/nuestros-amigos/" color="initial">
-          Nuestros amigos
-        </Link>
+        <Link href="/">Inicio</Link>
+        <Link href="/la-asociacion">La asociación</Link>
+        <Link href="/blog/">Blog</Link>
+        <Link href="/nuestros-amigos/">Nuestros amigos</Link>
       </Navigation>
     </header>
   );

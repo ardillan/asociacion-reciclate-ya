@@ -1,14 +1,35 @@
 import React from "react";
 import { connect, styled } from "frontity";
 
-const Link = ({ href, actions, children, color }) => {
-  const AnchorColor = color === "initial" ? "initial" : "orange";
+const Link = ({ state, href, actions, children, type }) => {
+  const selectAnchorType = (type) => {
+    switch (type) {
+      case "button":
+        return styled.a`
+          color: ${state.theme.colors.dark};
+          background: ${state.theme.colors.yellow};
+          font-family: "Barlow";
+          background: #ffe607;
+          padding: 10px;
+          display: inline-block;
+          margin-top: 10px;
+          transform: rotate(-3deg);
+          padding: 10px 25px;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 600;
+          text-decoration: none;
+        `;
+      default:
+        return styled.a`
+          color: ${state.theme.colors.dark};
+          text-decoration: none;
+          font-family: "Barlow";
+        `;
+    }
+  };
 
-  const Anchor = styled.a`
-    color: ${AnchorColor};
-    text-decoration: none;
-    font-family: "Barlow";
-  `;
+  const Anchor = selectAnchorType(type);
 
   return (
     <>
