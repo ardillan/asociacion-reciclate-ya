@@ -2,9 +2,9 @@ import React from "react";
 import { connect, styled, css } from "frontity";
 import Link from "./Link";
 import { renderText } from "../utils/helpers";
-import waveImage from "../../assets/images/background-wave.svg";
 import mainHeaderImage from "../../assets/images/background-main-header.svg";
 import bikeImage from "../../assets/images/home_cover.png";
+import groupImage from "../../assets/images/foto-grupo-01.jpg";
 
 const Home = ({ state, posts }) => {
   const Items = styled.div`
@@ -112,6 +112,32 @@ const Home = ({ state, posts }) => {
     }
   `;
 
+  const DescriptionContent = styled.div`
+    width: ${state.theme.screenSizes.container};
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-bottom: 150px;
+
+    div:first-child::after {
+      content: "";
+      background: ${state.theme.colors.yellow};
+      width: 100%;
+      display: block;
+      height: 100%;
+      position: relative;
+      top: -295px;
+      left: -30px;
+      z-index: -10;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  `;
+
   const keys = Object.keys(posts);
 
   let stickyPosts = [];
@@ -170,6 +196,21 @@ const Home = ({ state, posts }) => {
           );
         })}
       </Items>
+      <DescriptionContent>
+        <div>
+          <img src={groupImage} />
+        </div>
+        <div>
+          <h2>Asociación Recíclate YA</h2>
+          <p>
+            Somos una asociación <strong>sin ánimo de lucro</strong> que trata
+            de mejorar la movilidad de nuestro entorno mediante el uso de la{" "}
+            <strong>movilidad sostenible</strong>. Mantenemos en uso bicicletas
+            que nos ceden, las ponemos a punto y se las prestamos a la gente: lo
+            llamamos <strong>Bicicleteca</strong>; una "biblioteca" de bicis.
+          </p>
+        </div>
+      </DescriptionContent>
     </>
   );
 };
