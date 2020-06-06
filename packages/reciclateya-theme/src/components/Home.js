@@ -138,6 +138,14 @@ const Home = ({ state, posts }) => {
     }
   `;
 
+  const InfoButtons = styled.div`
+    width: ${state.theme.screenSizes.container};
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: auto;
+  `;
+
   const keys = Object.keys(posts);
 
   let stickyPosts = [];
@@ -211,6 +219,17 @@ const Home = ({ state, posts }) => {
           </p>
         </div>
       </DescriptionContent>
+      <InfoButtons>
+        <Link href={`como-formar-parte`} type="button-rounded">
+          ¿Cómo puedo formar parte?
+        </Link>
+        <Link href={`como-colaborar`} type="button-rounded">
+          ¿Cómo puedo colaborar?
+        </Link>
+        <Link href={`actividades`} type="button-rounded">
+          Actividades que realizamos
+        </Link>
+      </InfoButtons>
     </>
   );
 };
