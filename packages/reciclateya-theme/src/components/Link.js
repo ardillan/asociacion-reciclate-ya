@@ -10,7 +10,6 @@ const Link = ({ state, href, actions, children, type }) => {
           background: ${state.theme.colors.yellow};
           font-family: "Barlow";
           background: #ffe607;
-          padding: 10px;
           display: inline-block;
           margin-top: 10px;
           transform: rotate(-3deg);
@@ -19,6 +18,21 @@ const Link = ({ state, href, actions, children, type }) => {
           font-size: 18px;
           font-weight: 600;
           text-decoration: none;
+        `;
+
+      case "button-rounded":
+        return styled.a`
+          color: ${state.theme.colors.dark};
+          background: ${state.theme.colors.yellow};
+          font-family: "Barlow";
+          background: #ffe607;
+          display: inline-block;
+          padding: 10px 25px;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 600;
+          text-decoration: none;
+          border-radius: 50px;
         `;
       default:
         return styled.a`
