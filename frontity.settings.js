@@ -18,9 +18,10 @@ const settings = {
             showOnPost: false,
           },
           screenSizes: {
-            desktop: "900px",
-            tablet: "480px",
-            mobile: "0px",
+            desktop: "1200px",
+            tablet: "768px",
+            mobile: "480px",
+            container: "900px",
           },
           colors: {
             yellow: "#FFE607",

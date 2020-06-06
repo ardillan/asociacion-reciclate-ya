@@ -1,19 +1,28 @@
 import React from "react";
 import { connect, styled } from "frontity";
 
-const Container = ({ state, children }) => {
+const Container = ({ state, children, styles }) => {
   const Container = styled.div`
-    width: ${state.theme.screenSizes.desktop};
+    ${styles ? styles : ""};
+    width: ${state.theme.screenSizes.container};
     margin: auto;
     display: grid;
 
-    @media (max-width: ${state.theme.screenSizes.desktop}) {
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
       width: auto;
       grid-template-columns: 1fr;
       padding: 20px;
-
       img {
         width: 100%;
+      }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      img {
+        max-height: 200px;
       }
     }
   `;

@@ -2,19 +2,21 @@ import React from "react";
 import { connect, styled, css } from "frontity";
 import Link from "./Link";
 import { renderText } from "../utils/helpers";
-import Container from "./structure/Container";
 import waveImage from "../../assets/images/background-wave.svg";
+import mainHeaderImage from "../../assets/images/background-main-header.svg";
+import bikeImage from "../../assets/images/home_cover.png";
 
 const Home = ({ state, posts }) => {
   const Items = styled.div`
+    width: ${state.theme.screenSizes.container};
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
     grid-gap: 2rem;
     margin-top: 20px;
     align-items: space-around;
     padding: 20px;
-    width: ${state.theme.screenSizes.desktop};
-    margin: auto;
+    margin: 25px auto;
+
     h2 {
       font-size: 25px;
       font-weight: 600;
@@ -25,33 +27,89 @@ const Home = ({ state, posts }) => {
       font-family: "Noticia Text";
     }
 
-    @media (max-width: ${state.theme.screenSizes.desktop}) {
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
       width: auto;
-      grid-template-columns: 1fr;
+      margin: 0;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      width: auto;
     }
   `;
 
   const MainHeader = styled.div`
-    height: 100px;
-    background-color: ${state.theme.colors.softYellow};
     padding: 20px;
-    display: flex;
-    align-items: center;
 
-    p,
-    h2 {
-      margin: 0;
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      width: 100%;
+      height: inherit;
+      padding: 0;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      background-color: ${state.theme.colors.softYellow};
     }
   `;
 
   const MainHeaderBackground = styled.div`
-    background-image: url("${waveImage}");
-    background-size: 100%;
-    width: 100vw;
-    height: 160px;
+    background-image: url("${mainHeaderImage}");
+    width: 100%;
     background-repeat: no-repeat;
+    top: -400px;
+    position: absolute;
+    z-index: -500;
+    background-position: center;
     margin: auto;
-    min-height: calc(10vmax*1.5);
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+        display: none;
+    }
+  `;
+
+  const MainHeaderContent = styled.div`
+    width: ${state.theme.screenSizes.container};
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    margin: auto;
+    img {
+      height: 350px;
+    }
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      width: auto;
+      overflow: hidden;
+      background-color: ${state.theme.colors.softYellow};
+
+      img {
+        max-height: 200px;
+      }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      width: 100%;
+      padding: 0;
+      grid-template-columns: 1fr;
+      div:last-child {
+        width: initial;
+        img {
+          display: none;
+        }
+      }
+    }
   `;
 
   const keys = Object.keys(posts);
@@ -77,31 +135,31 @@ const Home = ({ state, posts }) => {
   return (
     <>
       <MainHeader>
-        <Container>
-          <Link href={stickyPosts[0].link} color="initial">
+        <MainHeaderContent>
+          <div>
+            <h2>{renderText(stickyPosts[0].title.rendered)}</h2>
             <div
               css={css`
-                width: 450px;
+                font-family: "Noticia Text";
               `}
-            >
-              <h2>{renderText(stickyPosts[0].title.rendered)}</h2>
-              <div
-                css={css`
-                  font-family: "Noticia Text";
-                `}
-                dangerouslySetInnerHTML={{
-                  __html: stickyPosts[0].excerpt.rendered,
-                }}
-              />
-            </div>
-          </Link>
-        </Container>
+              dangerouslySetInnerHTML={{
+                __html: stickyPosts[0].excerpt.rendered,
+              }}
+            />
+            <Link href={stickyPosts[0].link} type="button">
+              ¡Cuéntame más!
+            </Link>
+          </div>
+          <div>
+            <img src={bikeImage} />
+          </div>
+        </MainHeaderContent>
       </MainHeader>
       <MainHeaderBackground />
       <Items>
         {keys.slice(0, 3).map((id) => {
           return (
-            <Link href={posts[id].link} color="initial" key={id}>
+            <Link href={posts[id].link} key={id}>
               <h2>{renderText(posts[id].title.rendered)}</h2>
               <div
                 dangerouslySetInnerHTML={{
