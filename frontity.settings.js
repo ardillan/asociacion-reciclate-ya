@@ -18,12 +18,14 @@ const settings = {
             showOnPost: false,
           },
           screenSizes: {
-            desktop: "800px",
+            desktop: "900px",
             tablet: "480px",
             mobile: "0px",
           },
           colors: {
+            yellow: "#FFE607",
             softYellow: "#FFF9D8",
+            dark: "#27214D",
           },
         },
       },
