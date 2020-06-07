@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, styled } from "frontity";
+import { connect, styled, css } from "frontity";
 
 const Footer = ({ state }) => {
   const FooterBackground = styled.div`
@@ -69,8 +69,40 @@ const Footer = ({ state }) => {
           </ul>
         </InfoBoxes>
         <BottomLine>
-          <p>Hecho con Frontity y WordPress</p>
-          <p>¿Te gusta esta web? Recíclala y crea la tuya propia</p>
+          <p>
+            Hecho con{" "}
+            <a
+              href="https://frontity.org/"
+              target="_blank"
+              css={css`
+                color: initial;
+              `}
+            >
+              Frontity
+            </a>{" "}
+            y{" "}
+            <a
+              href="https://wordpress.com/"
+              target="_blank"
+              css={css`
+                color: initial;
+              `}
+            >
+              WordPress
+            </a>
+          </p>
+          <p>
+            ¿Te gusta esta web?{" "}
+            <a
+              href="https://github.com/ardillan/asociacion-reciclate-ya"
+              target="_blank"
+              css={css`
+                color: initial;
+              `}
+            >
+              Recíclala y crea la tuya propia
+            </a>
+          </p>
         </BottomLine>
       </FooterContainer>
     </FooterBackground>
