@@ -18,7 +18,20 @@ const Header = ({ state, actions }) => {
     ul {
     }
 
-    li {
+    li:nth-child(even) {
+      width: 100%;
+      text-align: center;
+      padding: 5px 0;
+      background: #ffe500;
+      list-style-type: none;
+      margin: -7px 0;
+      transform: rotate(-1deg);
+      font-size: 22px;
+      border-radius: 2px;
+      box-shadow: 2px 2px #f0d800;
+    }
+
+    li:nth-child(odd) {
       width: 100%;
       text-align: center;
       padding: 5px 0;
@@ -27,6 +40,8 @@ const Header = ({ state, actions }) => {
       margin: 15px 0;
       transform: rotate(1deg);
       font-size: 22px;
+      border-radius: 2px;
+      box-shadow: 2px 2px #f0d800;
     }
 
     /* Mobile */
@@ -63,6 +78,11 @@ const Header = ({ state, actions }) => {
       background-repeat: no-repeat;
       background-position: top;
       min-height:50px;
+
+      /* Mobile */
+      @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+        padding: 20px 20px 0px 10px;
+      }
       `}
     >
       <Menu>
