@@ -1,49 +1,23 @@
 {
-  "name": "asociacion-reciclate-ya",
+  "name": "reciclate-ya",
+  "version": "1.0.0",
   "private": true,
-  "description": "Repositorio para la Asociación Recíclate YA",
-  "version": "0.1.0",
-  "author": "Ardillán <ardillan@me.com>",
-  "dependencies": {
-    "bulma": "^0.8.0",
-    "eslint-plugin-react-hooks": "^2.3.0",
-    "gatsby": "^2.18.25",
-    "gatsby-image": "^2.2.39",
-    "gatsby-plugin-react-helmet": "^3.1.16",
-    "gatsby-plugin-sass": "^2.1.27",
-    "gatsby-plugin-sharp": "^2.4.4",
-    "gatsby-source-filesystem": "^2.1.40",
-    "gatsby-source-wordpress": "^3.1.58",
-    "gatsby-transformer-json": "^2.4.0",
-    "gatsby-transformer-sharp": "^2.3.13",
-    "node-sass": "^4.13.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1",
-    "typeface-nunito": "^1.1.3"
-  },
-  "devDependencies": {
-    "prettier": "^1.19.1"
-  },
+  "description": "Página web de la Asociación Recíclate YA",
   "keywords": [
-    "gatsby"
+    "frontity"
   ],
-  "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "dev": "frontity dev",
+    "build": "frontity build",
+    "serve": "frontity serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "prettier": {},
+  "dependencies": {
+    "@frontity/core": "^1.5.3",
+    "@frontity/html2react": "^1.3.2",
+    "@frontity/tiny-router": "^1.2.0",
+    "@frontity/wp-source": "^1.7.0",
+    "frontity": "^1.6.0",
+    "reciclateya-theme": "file:packages/reciclateya-theme"
   }
 }

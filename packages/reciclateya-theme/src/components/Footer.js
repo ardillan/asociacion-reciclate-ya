@@ -1,0 +1,142 @@
+import React from "react";
+import { connect, styled, css } from "frontity";
+
+const Footer = ({ state }) => {
+  const FooterBackground = styled.div`
+    background: ${state.theme.colors.softYellow};
+    width: 100vw;
+    padding: 25px 0;
+    margin-top: 250px;
+  `;
+
+  const FooterContainer = styled.footer`
+    width: ${state.theme.screenSizes.container};
+    margin: -160px auto auto;
+    position: relative;
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      width: auto;
+      padding: 30px;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      width: auto;
+      padding: 30px;
+    }
+  `;
+
+  const InfoBoxes = styled.div`
+    ul {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+      text-align: center;
+    }
+
+    li {
+      border: 4px solid ${state.theme.colors.yellow};
+      background: white;
+      list-style-type: none;
+      font-family: "Barlow";
+      display: flex;
+      padding: 30px;
+    }
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      ul {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+      }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      ul {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+      }
+    }
+  `;
+
+  const BottomLine = styled.div`
+    text-align: center;
+  `;
+
+  return (
+    <FooterBackground>
+      <FooterContainer>
+        <InfoBoxes>
+          <ul>
+            <li>
+              <div>
+                <h3>¿Dónde estamos?</h3>
+                <p>
+                  Nuestro local está situado en Torrelavega, Calle Carrera nº 12
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Horario</h3>
+                <p>Martes y Jueves  de 19:00 a 21:00</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Recíclate YA</h3>
+                <p>
+                  Es una asociación que fomentamos el reciclaje y el uso de la
+                  bicicleta como medio de transporte habitual.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </InfoBoxes>
+        <BottomLine>
+          <p>
+            Hecho con{" "}
+            <a
+              href="https://frontity.org/"
+              target="_blank"
+              css={css`
+                color: initial;
+              `}
+            >
+              Frontity
+            </a>{" "}
+            y{" "}
+            <a
+              href="https://wordpress.com/"
+              target="_blank"
+              css={css`
+                color: initial;
+              `}
+            >
+              WordPress
+            </a>
+          </p>
+          <p>
+            ¿Te gusta esta web?{" "}
+            <a
+              href="https://github.com/ardillan/asociacion-reciclate-ya"
+              target="_blank"
+              css={css`
+                color: initial;
+              `}
+            >
+              Recíclala y crea la tuya propia
+            </a>
+          </p>
+        </BottomLine>
+      </FooterContainer>
+    </FooterBackground>
+  );
+};
+
+export default connect(Footer);

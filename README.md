@@ -1,6 +1,6 @@
 ## Asociación Recíclate YA
 
-Sitio web para la asociación Recíclate YA. Construido bajo GatsbyJS y WordPress.
+Sitio web para la asociación Recíclate YA. Construido gracias a Frontity y WordPress.
 
 ## 🚀 Inicio rápido
 
@@ -13,16 +13,16 @@ Sitio web para la asociación Recíclate YA. Construido bajo GatsbyJS y WordPres
 
 1.  **Desarrollo**
 
-    Para ejecutar la web en tu ordeandor tendrás que [descargar y configurar GatsbyJS](https://www.gatsbyjs.org/docs/quick-start/). Una vez descargado ejecuta el siguiente comando para instalar los paquetes necesarios.
+    Para ejecutar la web en tu ordenador tendrás que descargar las dependencias y [ejecutar Frontity](https://docs.frontity.org/getting-started/quick-start-guide). En primer lugar, en la carpeta raíz del proyecto hay que ejecutar:
 
     ```bash
     npm install
     ```
 
-    Por último, ejecuta Gatsby
+    Por último, ejecuta Frontity
 
     ```bash
-    gastby develop
+    npx frontity dev
     ```
 
 ## 🎓 ¿Cómo funciona?
@@ -33,4 +33,4 @@ Esta web renderiza su contenido gracias a ReactJS, una librería para crear inte
 
 ### Back
 
-El contenido de la web se nutre a través de [WordPress](https://www.wordpress.com). GatsbyJS incluye [GraphQL](https://graphql.org/), una utilidad que permite extraer datos y estructurarlos para su posterior procesamiento.
+El contenido de la web se nutre a través de [WordPress](https://www.wordpress.com) gracias a su API.
