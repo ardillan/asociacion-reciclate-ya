@@ -4,6 +4,7 @@ import Switch from "@frontity/components/switch";
 
 import Home from "./Home";
 import Post from "./Post";
+import Page from "./Page";
 import Blog from "./Blog";
 import Header from "./Header";
 import Theme from "./Theme";
@@ -20,7 +21,8 @@ const Root = ({ state }) => {
         <Switch>
           {/* <Loading when={data.isFetching} /> */}
           <Home when={data.isHome} posts={state.source.post} />
-          <Post when={(data.isPage || data.isPost) && data.route != "/blog/"} />
+          <Post when={data.isPost && data.route != "/blog/"} />
+          <Page when={data.isPage && data.route != "/blog/"} />
           <Blog when={data.route === "/blog/"} />
         </Switch>
       </main>

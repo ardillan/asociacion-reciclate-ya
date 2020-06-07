@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "frontity";
 import Container from "./structure/Container";
+import BreadCrumbs from "../components/BreadCrumbs";
+import { renderText } from "../utils/helpers";
 
 const Post = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
@@ -9,8 +11,17 @@ const Post = ({ state, libraries }) => {
 
   return (
     <Container>
-      {/* <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} /> */}
-      <Html2React html={post.content.rendered} />
+      <BreadCrumbs
+        data={[
+          { link: "/", text: "Inicio" },
+          { link: "/blog/", text: "Blog" },
+          {
+            link: `${post.link}`,
+            text: `${renderText(post.title.rendered)}`,
+          },
+        ]}
+      />
+      <Html2React html={renderText(post.content.rendered)} />
     </Container>
   );
 };
