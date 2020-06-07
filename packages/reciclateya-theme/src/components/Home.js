@@ -123,7 +123,7 @@ const Home = ({ state, posts }) => {
     grid-gap: 30px;
     margin-bottom: 150px;
 
-    div:first-child::after {
+    div:first-of-type::after {
       content: "";
       background: ${state.theme.colors.yellow};
       width: 100%;
@@ -223,13 +223,13 @@ const Home = ({ state, posts }) => {
         </div>
       </DescriptionContent>
       <InfoButtons>
-        <Link href={`como-formar-parte`} type="button-rounded">
+        <Link href="/como-formar-parte/" type="button-rounded">
           ¿Cómo puedo formar parte?
         </Link>
-        <Link href={`como-colaborar`} type="button-rounded">
+        <Link href="/como-colaborar/" type="button-rounded">
           ¿Cómo puedo colaborar?
         </Link>
-        <Link href={`actividades`} type="button-rounded">
+        <Link href="/actividades/" type="button-rounded">
           Actividades que realizamos
         </Link>
       </InfoButtons>
