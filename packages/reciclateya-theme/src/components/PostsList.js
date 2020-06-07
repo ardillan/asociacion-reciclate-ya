@@ -36,6 +36,19 @@ const PostsList = ({ state, libraries }) => {
       justify-content: center;
       align-content: center;
     }
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      width: auto;
+      grid-template-columns: 1fr;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      width: auto;
+      grid-template-columns: 1fr;
+    }
   `;
 
   const Items = styled.div`
@@ -58,6 +71,30 @@ const PostsList = ({ state, libraries }) => {
 
     p {
       font-size: 18px;
+    }
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      width: auto;
+      grid-template-columns: 1fr;
+      padding: 20px;
+
+      h2 {
+        font-size: 23px;
+        font-weight: 600;
+      }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      width: auto;
+      grid-template-columns: 1fr;
+      padding: 20px;
+      h2 {
+        font-size: 23px;
+        font-weight: 600;
+      }
     }
   `;
 

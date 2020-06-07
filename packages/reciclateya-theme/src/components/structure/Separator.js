@@ -48,7 +48,7 @@ const Separator = ({ state, position = "left", icon = "bike" }) => {
       background-repeat: repeat-x;
       background-size: ${height} ${height};
       position: absolute;
-      ${position === "left" ? "left: calc(-50vw);" : "right: calc(-50vw);"}
+      ${position === "left" ? "left: calc(-50vw);" : "right: 0;"}
     }
     &:after {
       height: ${height};
@@ -65,7 +65,7 @@ const Separator = ({ state, position = "left", icon = "bike" }) => {
       background-repeat: repeat-x;
       background-size: ${height} ${height};
       position: absolute;
-      ${position === "left" ? "left: calc(-50vw);" : "right: calc(-50vw);"}
+      ${position === "left" ? "left: calc(-50vw);" : "right: 0;"}
     }
   `;
 

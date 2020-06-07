@@ -36,25 +36,57 @@ const Post = ({ state, libraries }) => {
         font-size: 45px;
       }
     }
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      width: auto;
+      grid-template-columns: 1fr;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      width: auto;
+      grid-template-columns: 1fr;
+    }
   `;
   const PageContainer = styled.article`
     width: ${state.theme.screenSizes.pageContainer};
     margin: auto;
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      width: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      width: auto;
+
+      img {
+        width: 100%;
+      }
+    }
   `;
   return (
     <>
       <Container>
+        <BreadCrumbs
+          data={[
+            { link: "/", text: "Inicio" },
+            { link: "/blog/", text: "Blog" },
+            {
+              link: `${post.link}`,
+              text: `${renderText(post.title.rendered)}`,
+            },
+          ]}
+        />
         <PageContainer>
-          <BreadCrumbs
-            data={[
-              { link: "/", text: "Inicio" },
-              { link: "/blog/", text: "Blog" },
-              {
-                link: `${post.link}`,
-                text: `${renderText(post.title.rendered)}`,
-              },
-            ]}
-          />
           <PostHeader>
             <div>
               <img
@@ -84,6 +116,7 @@ const Post = ({ state, libraries }) => {
           </PostHeader>
           <Separator />
           <Html2React html={renderText(post.content.rendered)} />
+          <Separator position="right" icon="walker" />
         </PageContainer>
       </Container>
 

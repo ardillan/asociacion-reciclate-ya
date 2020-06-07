@@ -14,16 +14,13 @@ const Container = ({ state, children, styles }) => {
       width: auto;
       grid-template-columns: 1fr;
       padding: 20px;
-      img {
-        width: 100%;
-      }
     }
 
     /* Mobile */
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
-      img {
-        max-height: 200px;
-      }
+      width: auto;
+      grid-template-columns: 1fr;
+      padding: 20px;
     }
   `;
 

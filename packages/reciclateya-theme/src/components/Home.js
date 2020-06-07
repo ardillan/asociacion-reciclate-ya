@@ -140,6 +140,23 @@ const Home = ({ state, posts }) => {
       width: 100%;
       display: block;
     }
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      grid-template-columns: 1fr;
+      width: auto;
+      padding: 20px;
+      margin: 0;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      grid-template-columns: 1fr;
+      width: auto;
+      padding: 20px;
+      margin: 0;
+    }
   `;
 
   const InfoButtons = styled.div`
@@ -148,6 +165,23 @@ const Home = ({ state, posts }) => {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     margin: auto;
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      grid-template-columns: 1fr;
+      width: auto;
+      padding: 20px;
+      margin: 0;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      grid-template-columns: 1fr;
+      width: auto;
+      padding: 20px;
+      margin: 0;
+    }
   `;
 
   const keys = Object.keys(posts);

@@ -1,8 +1,8 @@
 import React from "react";
-import { styled, css } from "frontity";
+import { styled, css, connect } from "frontity";
 import Link from "../components/Link";
 
-const BreadCrumbs = ({ data }) => {
+const BreadCrumbs = ({ state, data }) => {
   const BreadCrumbsContainer = styled.div`
     font-family: "Barlow";
     text-transform: uppercase;
@@ -10,6 +10,17 @@ const BreadCrumbs = ({ data }) => {
     margin-top: 25px;
     span:last-child {
       font-weight: 600;
+    }
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      margin: 15px 0;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      margin: 15px 0;
     }
   `;
 
@@ -33,4 +44,4 @@ const BreadCrumbs = ({ data }) => {
   );
 };
 
-export default BreadCrumbs;
+export default connect(BreadCrumbs);

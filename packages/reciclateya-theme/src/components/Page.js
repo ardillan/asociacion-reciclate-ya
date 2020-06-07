@@ -32,11 +32,33 @@ const Post = ({ state, libraries }) => {
       justify-content: center;
       align-content: center;
     }
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      grid-template-columns: 1fr;
+    }
   `;
 
   const PostContainer = styled.article`
     width: ${state.theme.screenSizes.pageContainer};
     margin: auto;
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      width: auto;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      width: auto;
+    }
   `;
 
   return (
@@ -70,6 +92,7 @@ const Post = ({ state, libraries }) => {
           </PostHeader>
           <Separator />
           <Html2React html={post.content.rendered} />
+          <Separator position="right" icon="walker" />
         </PostContainer>
       </Container>
 

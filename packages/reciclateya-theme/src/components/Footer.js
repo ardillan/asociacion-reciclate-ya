@@ -13,6 +13,19 @@ const Footer = ({ state }) => {
     width: ${state.theme.screenSizes.container};
     margin: -160px auto auto;
     position: relative;
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      width: auto;
+      padding: 30px;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      width: auto;
+      padding: 30px;
+    }
   `;
 
   const InfoBoxes = styled.div`
@@ -31,6 +44,23 @@ const Footer = ({ state }) => {
       font-family: "Barlow";
       display: flex;
       padding: 30px;
+    }
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes
+        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      ul {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+      }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      ul {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+      }
     }
   `;
 
