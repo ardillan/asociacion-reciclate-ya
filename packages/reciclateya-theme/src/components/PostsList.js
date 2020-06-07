@@ -19,6 +19,10 @@ const PostsList = ({ state, libraries }) => {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
 
+    img {
+      width: 100%;
+    }
+
     div:first-of-type {
       display: flex;
       flex-direction: row;
@@ -108,12 +112,7 @@ const PostsList = ({ state, libraries }) => {
           </p>
         </div>
         <div>
-          <img
-            src={bikeImage}
-            css={css`
-              max-height: 280px;
-            `}
-          />
+          <img src={bikeImage} />
         </div>
       </PostHeader>
       <Items>

@@ -15,6 +15,7 @@ const Post = ({ state, libraries }) => {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
     margin-bottom: -60px;
+
     div:first-of-type {
       display: flex;
       flex-direction: row;
@@ -37,11 +38,20 @@ const Post = ({ state, libraries }) => {
     @media screen and (min-width: ${state.theme.screenSizes
         .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
       grid-template-columns: 1fr 1fr;
+
+      img {
+        max-width: 100%;
+        width: auto;
+      }
     }
 
     /* Mobile */
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
       grid-template-columns: 1fr;
+      img {
+        max-width: 100%;
+        width: auto;
+      }
     }
   `;
 
@@ -61,6 +71,30 @@ const Post = ({ state, libraries }) => {
     }
   `;
 
+  const PostContent = styled.div`
+    img {
+      max-width: 100%;
+    }
+
+    .coblocks-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      list-style-type: none;
+    }
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes.mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+          .coblocks-gallery {
+            grid-template-columns:  1fr;
+          }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+      .coblocks-gallery {
+        grid-template-columns:  1fr;
+      }
+  `;
   return (
     <>
       <Container>
@@ -82,16 +116,13 @@ const Post = ({ state, libraries }) => {
               <Html2React html={post.excerpt.rendered} />
             </div>
             <div>
-              <img
-                src={bikeImage}
-                css={css`
-                  max-height: 280px;
-                `}
-              />
+              <img src={bikeImage} />
             </div>
           </PostHeader>
           <Separator />
-          <Html2React html={post.content.rendered} />
+          <PostContent>
+            <Html2React html={post.content.rendered} />
+          </PostContent>
           <Separator position="right" icon="walker" />
         </PostContainer>
       </Container>

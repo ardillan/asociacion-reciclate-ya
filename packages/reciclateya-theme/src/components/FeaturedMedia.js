@@ -5,7 +5,7 @@ import Image from "@frontity/components/image";
 const PostFeaturedMedia = ({ state, id }) => {
   const media = state.source.attachment[id];
 
-  if (!media) return null;
+  if (!media) return <StyledImage />;
 
   const srcset =
     Object.values(media.media_details.sizes)
@@ -33,4 +33,6 @@ export default connect(PostFeaturedMedia);
 
 const StyledImage = styled(Image)`
   width: 100%;
+  background: #ffe928;
+  border: none;
 `;

@@ -52,7 +52,6 @@ const Post = ({ state, libraries }) => {
 
       img {
         width: 100%;
-        background: green;
       }
     }
 
@@ -63,7 +62,6 @@ const Post = ({ state, libraries }) => {
 
       img {
         width: 100%;
-        background: red;
       }
     }
   `;
@@ -98,7 +96,6 @@ const Post = ({ state, libraries }) => {
         <PageContainer>
           <PostHeader>
             <div>
-              {/* <img src={post.jetpack_featured_media_url} /> */}
               <PostFeaturedMedia id={post.featured_media} />
             </div>
             <div>
