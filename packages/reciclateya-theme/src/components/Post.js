@@ -2,6 +2,7 @@ import React from "react";
 import { connect, styled, css } from "frontity";
 import Container from "./structure/Container";
 import BreadCrumbs from "../components/BreadCrumbs";
+import PostFeaturedMedia from "../components/FeaturedMedia";
 import Footer from "../components/Footer";
 import Separator from "./structure/Separator";
 import { renderText, formatDate } from "../utils/helpers";
@@ -10,12 +11,18 @@ const Post = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
   const Html2React = libraries.html2react.Component;
-
   const PostHeader = styled.header`
     display: grid;
     grid-template-columns: 35% 65%;
     grid-gap: 50px;
     margin-top: 40px;
+
+    img {
+      height: 280px;
+      width: 280px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
 
     div:first-of-type {
       display: flex;
@@ -42,12 +49,22 @@ const Post = ({ state, libraries }) => {
         .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
       width: auto;
       grid-template-columns: 1fr;
+
+      img {
+        width: 100%;
+        background: green;
+      }
     }
 
     /* Mobile */
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
       width: auto;
       grid-template-columns: 1fr;
+
+      img {
+        width: 100%;
+        background: red;
+      }
     }
   `;
   const PageContainer = styled.article`
@@ -58,19 +75,11 @@ const Post = ({ state, libraries }) => {
     @media screen and (min-width: ${state.theme.screenSizes
         .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
       width: auto;
-
-      img {
-        width: 100%;
-      }
     }
 
     /* Mobile */
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
       width: auto;
-
-      img {
-        width: 100%;
-      }
     }
   `;
   return (
@@ -89,15 +98,8 @@ const Post = ({ state, libraries }) => {
         <PageContainer>
           <PostHeader>
             <div>
-              <img
-                src={post.jetpack_featured_media_url}
-                css={css`
-                  height: 280px;
-                  width: 280px;
-                  border-radius: 5px;
-                  object-fit: cover;
-                `}
-              />
+              {/* <img src={post.jetpack_featured_media_url} /> */}
+              <PostFeaturedMedia id={post.featured_media} />
             </div>
             <div>
               <h1>
