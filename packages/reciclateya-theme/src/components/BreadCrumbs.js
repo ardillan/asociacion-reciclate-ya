@@ -26,8 +26,8 @@ const BreadCrumbs = ({ state, data }) => {
 
   return (
     <BreadCrumbsContainer>
-      {data.map((value) => (
-        <span>
+      {data.map((value, key) => (
+        <span key={key}>
           <Link href={`${value.link}`}>{value.text}</Link>
           <span
             css={css`
