@@ -16,6 +16,10 @@ const Post = ({ state, libraries }) => {
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
     margin-bottom: -60px;
 
+    img {
+      max-width: 100%;
+      width: auto;
+    }
     div:first-of-type {
       display: flex;
       flex-direction: row;
