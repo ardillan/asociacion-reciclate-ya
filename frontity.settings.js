@@ -22,6 +22,7 @@ const settings = {
             tablet: "768px",
             mobile: "480px",
             container: "900px",
+            pageContainer: "800px",
           },
           colors: {
             yellow: "#FFE607",
