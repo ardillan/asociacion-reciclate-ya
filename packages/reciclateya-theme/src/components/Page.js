@@ -3,6 +3,7 @@ import { connect, styled, css } from "frontity";
 import Container from "./structure/Container";
 import Footer from "./Footer";
 import BreadCrumbs from "../components/BreadCrumbs";
+import Separator from "../components/structure/Separator";
 import bikeImage from "../../assets/images/home_cover.png";
 
 const Post = ({ state, libraries }) => {
@@ -13,7 +14,7 @@ const Post = ({ state, libraries }) => {
   const PostHeader = styled.header`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-
+    margin-bottom: -60px;
     div:first-of-type {
       display: flex;
       flex-direction: row;
@@ -33,37 +34,45 @@ const Post = ({ state, libraries }) => {
     }
   `;
 
+  const PostContainer = styled.article`
+    width: ${state.theme.screenSizes.pageContainer};
+    margin: auto;
+  `;
+
   return (
     <>
       <Container>
-        <BreadCrumbs
-          data={[
-            { link: "/", text: "Inicio" },
-            {
-              link: `${post.link}`,
-              text: `${post.title.rendered}`,
-            },
-          ]}
-        />
-        <PostHeader>
-          <div>
-            <h1>
-              <Html2React html={post.title.rendered} />
-            </h1>
-            <Html2React html={post.excerpt.rendered} />
-          </div>
-          <div>
-            <img
-              src={bikeImage}
-              css={css`
-                max-height: 280px;
-              `}
-            />
-          </div>
-        </PostHeader>
-
-        <Html2React html={post.content.rendered} />
+        <PostContainer>
+          <BreadCrumbs
+            data={[
+              { link: "/", text: "Inicio" },
+              {
+                link: `${post.link}`,
+                text: `${post.title.rendered}`,
+              },
+            ]}
+          />
+          <PostHeader>
+            <div>
+              <h1>
+                <Html2React html={post.title.rendered} />
+              </h1>
+              <Html2React html={post.excerpt.rendered} />
+            </div>
+            <div>
+              <img
+                src={bikeImage}
+                css={css`
+                  max-height: 280px;
+                `}
+              />
+            </div>
+          </PostHeader>
+          <Separator />
+          <Html2React html={post.content.rendered} />
+        </PostContainer>
       </Container>
+
       <Footer />
     </>
   );

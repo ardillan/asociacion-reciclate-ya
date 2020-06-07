@@ -4,6 +4,7 @@ import Link from "./Link";
 import { renderText } from "../utils/helpers";
 
 import Footer from "./Footer";
+import Separator from "../components/structure/Separator";
 
 import mainHeaderImage from "../../assets/images/background-main-header.svg";
 import bikeImage from "../../assets/images/home_cover.png";
@@ -121,7 +122,7 @@ const Home = ({ state, posts }) => {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
-    margin-bottom: 150px;
+    margin: 100px auto;
 
     div:first-of-type::after {
       content: "";
@@ -225,6 +226,7 @@ const Home = ({ state, posts }) => {
           <Link href="/blog/">Ver más entradas</Link>
         </div>
       </Items>
+      <Separator />
       <DescriptionContent>
         <div>
           <img src={groupImage} />
@@ -240,6 +242,7 @@ const Home = ({ state, posts }) => {
           </p>
         </div>
       </DescriptionContent>
+      <Separator position="right" icon="walker" />
       <InfoButtons>
         <Link href="/como-formar-parte/" type="button-rounded">
           ¿Cómo puedo formar parte?

@@ -6,12 +6,12 @@ const Footer = ({ state }) => {
     background: ${state.theme.colors.softYellow};
     width: 100vw;
     padding: 25px 0;
-    margin-top: 50px;
+    margin-top: 250px;
   `;
 
   const FooterContainer = styled.footer`
     width: ${state.theme.screenSizes.container};
-    margin: auto;
+    margin: -160px auto auto;
     position: relative;
   `;
 
