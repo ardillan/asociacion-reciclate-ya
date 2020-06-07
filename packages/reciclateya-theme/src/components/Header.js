@@ -18,7 +18,7 @@ const Header = ({ state, actions }) => {
     ul {
     }
 
-    li:nth-child(even) {
+    li:nth-of-type(even) {
       width: 100%;
       text-align: center;
       padding: 5px 0;
@@ -31,7 +31,7 @@ const Header = ({ state, actions }) => {
       box-shadow: 2px 2px #f0d800;
     }
 
-    li:nth-child(odd) {
+    li:nth-of-type(odd) {
       width: 100%;
       text-align: center;
       padding: 5px 0;
