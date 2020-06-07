@@ -6,6 +6,19 @@ const settings = {
       title: "Asociación Recíclate YA",
       description: "Página web de la Asociación Recíclate YA",
     },
+    theme: {
+      isMenuOpen: false,
+    },
+  },
+  actions: {
+    theme: {
+      openMenu: ({ state }) => {
+        state.theme.isMenuOpen = true;
+      },
+      closeMenu: ({ state }) => {
+        state.theme.isMenuOpen = false;
+      },
+    },
   },
   packages: [
     {
