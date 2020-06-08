@@ -83,17 +83,17 @@ const Post = ({ state, libraries }) => {
   return (
     <>
       <Container>
-        <BreadCrumbs
-          data={[
-            { link: "/", text: "Inicio" },
-            { link: "/blog/", text: "Blog" },
-            {
-              link: `${post.link}`,
-              text: `${renderText(post.title.rendered)}`,
-            },
-          ]}
-        />
         <PageContainer>
+          <BreadCrumbs
+            data={[
+              { link: "/", text: "Inicio" },
+              { link: "/blog/", text: "Blog" },
+              {
+                link: `${post.link}`,
+                text: `${renderText(post.title.rendered)}`,
+              },
+            ]}
+          />
           <PostHeader>
             <div>
               <PostFeaturedMedia id={post.featured_media} />
