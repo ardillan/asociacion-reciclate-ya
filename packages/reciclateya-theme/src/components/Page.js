@@ -19,6 +19,8 @@ const Post = ({ state, libraries }) => {
     img {
       max-width: 100%;
       width: auto;
+      object-fit: contain;
+      max-height: 300px;
     }
     div:first-of-type {
       display: flex;

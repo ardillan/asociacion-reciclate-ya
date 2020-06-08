@@ -21,6 +21,8 @@ const PostsList = ({ state, libraries }) => {
 
     img {
       width: 100%;
+      object-fit: contain;
+      max-height: 300px;
     }
 
     div:first-of-type {
@@ -117,7 +119,6 @@ const PostsList = ({ state, libraries }) => {
       </PostHeader>
       <Items>
         {keys.map((id) => {
-          console.log(posts[id]);
           return (
             <Link href={posts[id].link} key={id}>
               <h2>{renderText(posts[id].title.rendered)}</h2>
