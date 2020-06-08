@@ -43,6 +43,7 @@ const Footer = ({ state }) => {
       list-style-type: none;
       font-family: "Barlow";
       display: flex;
+      justify-content: center;
       padding: 30px;
     }
 
