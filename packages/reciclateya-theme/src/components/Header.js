@@ -16,32 +16,34 @@ const Header = ({ state, actions }) => {
     }
 
     ul {
-    }
+      a {
+        display: block;
+        padding: 5px 0;
+      }
+      li:nth-of-type(even) {
+        width: 100%;
+        text-align: center;
 
-    li:nth-of-type(even) {
-      width: 100%;
-      text-align: center;
-      padding: 5px 0;
-      background: #ffe500;
-      list-style-type: none;
-      margin: -7px 0;
-      transform: rotate(-1deg);
-      font-size: 22px;
-      border-radius: 2px;
-      box-shadow: 2px 2px #f0d800;
-    }
+        background: #ffe500;
+        list-style-type: none;
+        margin: -7px 0;
+        transform: rotate(-1deg);
+        font-size: 22px;
+        border-radius: 2px;
+        box-shadow: 2px 2px #f0d800;
+      }
 
-    li:nth-of-type(odd) {
-      width: 100%;
-      text-align: center;
-      padding: 5px 0;
-      background: #ffec45;
-      list-style-type: none;
-      margin: 15px 0;
-      transform: rotate(1deg);
-      font-size: 22px;
-      border-radius: 2px;
-      box-shadow: 2px 2px #f0d800;
+      li:nth-of-type(odd) {
+        width: 100%;
+        text-align: center;
+        background: #ffec45;
+        list-style-type: none;
+        margin: 15px 0;
+        transform: rotate(1deg);
+        font-size: 22px;
+        border-radius: 2px;
+        box-shadow: 2px 2px #f0d800;
+      }
     }
 
     /* Mobile */
@@ -140,6 +142,7 @@ const Header = ({ state, actions }) => {
         css={css`
           margin: auto;
           width: ${state.theme.screenSizes.container};
+
           /* Tablet */
           @media screen and (min-width: ${state.theme.screenSizes
               .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
