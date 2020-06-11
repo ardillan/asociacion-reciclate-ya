@@ -78,7 +78,7 @@ const Footer = ({ state }) => {
               <div>
                 <h3>¿Dónde estamos?</h3>
                 <p>
-                  Nuestro local está situado en Torrelavega, Calle Carrera nº 12
+                  Nuestro local está situado en Torrelavega, Calle Carrera nº 8
                 </p>
               </div>
             </li>
@@ -90,11 +90,10 @@ const Footer = ({ state }) => {
             </li>
             <li>
               <div>
-                <h3>Recíclate YA</h3>
-                <p>
-                  Es una asociación que fomentamos el reciclaje y el uso de la
-                  bicicleta como medio de transporte habitual.
-                </p>
+                <h3>Contacto</h3>
+                <p>648 11 56 93</p>
+                <p>reciclateyusalabici@gmail.com</p>
+                <a href="facebook.com/reciclateya">Facebook</a>
               </div>
             </li>
           </ul>
