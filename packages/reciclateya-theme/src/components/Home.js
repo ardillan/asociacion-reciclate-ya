@@ -130,10 +130,10 @@ const Home = ({ state, posts }) => {
       width: 100%;
       display: block;
       height: 100%;
-      position: relative;
-      top: -295px;
-      left: -30px;
-      z-index: -10;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: -1;
     }
 
     img {
@@ -262,7 +262,11 @@ const Home = ({ state, posts }) => {
       </Items>
       <Separator />
       <DescriptionContent>
-        <div>
+        <div
+          css={css`
+            position: relative;
+          `}
+        >
           <img src={groupImage} />
         </div>
         <div>
