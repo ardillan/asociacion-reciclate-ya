@@ -86,6 +86,8 @@ const Post = ({ state, libraries }) => {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       list-style-type: none;
+      padding: 0;
+      margin: 0;
     }
 
     /* Tablet */
