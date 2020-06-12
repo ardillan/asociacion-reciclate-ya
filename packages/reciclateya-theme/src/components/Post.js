@@ -69,6 +69,24 @@ const Post = ({ state, libraries }) => {
     width: ${state.theme.screenSizes.pageContainer};
     margin: auto;
 
+    .wp-block-coblocks-gallery-collage {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      figure {
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
     /* Tablet */
     @media screen and (min-width: ${state.theme.screenSizes
         .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
