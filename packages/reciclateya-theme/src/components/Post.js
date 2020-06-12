@@ -51,7 +51,11 @@ const Post = ({ state, libraries }) => {
       grid-template-columns: 1fr;
 
       img {
+        height: auto;
         width: 100%;
+        border-radius: 5px;
+        object-fit: contain;
+        object-position: top;
       }
     }
 
@@ -61,7 +65,10 @@ const Post = ({ state, libraries }) => {
       grid-template-columns: 1fr;
 
       img {
+        height: auto;
         width: 100%;
+        border-radius: 5px;
+        object-fit: contain;
       }
     }
   `;
