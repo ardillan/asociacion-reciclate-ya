@@ -32,7 +32,7 @@ const Footer = ({ state }) => {
     ul {
       padding: 0;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
       grid-gap: 20px;
       text-align: center;
     }
@@ -62,6 +62,10 @@ const Footer = ({ state }) => {
         grid-template-columns: 1fr;
         grid-gap: 20px;
       }
+
+      li {
+        padding: 10px;
+      }
     }
   `;
 
@@ -85,14 +89,18 @@ const Footer = ({ state }) => {
             <li>
               <div>
                 <h3>Horario</h3>
-                <p>Martes y Jueves  de 19:00 a 21:00</p>
+                <p>Martes y Jueves de 19:00 a 21:00</p>
               </div>
             </li>
             <li>
               <div>
                 <h3>Contacto</h3>
-                <p>648 11 56 93</p>
-                <p>reciclateyusalabici@gmail.com</p>
+                <a href="tel:648115693">648 11 56 93</a>
+                <br />
+                <a href="mailto:reciclateyusalabici@gmail.com">
+                  reciclateyusalabici@gmail.com
+                </a>
+                <br />
                 <a href="facebook.com/reciclateya">Facebook</a>
               </div>
             </li>
