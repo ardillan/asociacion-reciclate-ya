@@ -132,13 +132,16 @@ const Home = ({ state, posts }) => {
       height: 100%;
       position: absolute;
       top: 1rem;
-      right: 1rem;
       z-index: -1;
+      border-radius: 5px;
+      transform: rotate(2deg);
     }
 
     img {
       width: 100%;
       display: block;
+      transform: rotate(-1deg);
+      border-radius: 8px;
     }
 
     /* Tablet */
