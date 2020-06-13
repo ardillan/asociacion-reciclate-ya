@@ -47,6 +47,15 @@ const Footer = ({ state }) => {
       padding: 30px;
     }
 
+    a {
+      color: initial;
+      text-decoration-color: ${state.theme.colors.yellow};
+
+      :hover {
+        text-decoration-color: ${state.theme.colors.dark};
+      }
+    }
+
     /* Tablet */
     @media screen and (min-width: ${state.theme.screenSizes
         .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
@@ -97,7 +106,7 @@ const Footer = ({ state }) => {
                 <h3>Contacto</h3>
                 <a href="tel:648115693">648 11 56 93</a>
                 <br />
-                <a href="mailto:reciclateyusalabici@gmail.com">
+                <a href="mailto:reciclateyusalabici@gmail.com?subject=Recíclate%20YA%20|%20Contacto%20desde%20la%20web">
                   reciclateyusalabici@gmail.com
                 </a>
                 <br />
