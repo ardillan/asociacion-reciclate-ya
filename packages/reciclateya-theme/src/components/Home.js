@@ -67,16 +67,29 @@ const Home = ({ state, posts }) => {
     background-repeat: no-repeat;
     top: -400px;
     position: absolute;
-    z-index: -500;
+    z-index: -1;
     background-position: center;
     margin: auto;
     left: 0;
     right: 0;
     bottom: 0;
 
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes.mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      top: -140px;
+      background-size: cover;
+      min-height: 240px;
+      position: relative;
+      margin-bottom: -160px;
+    }
+
     /* Mobile */
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
-        display: none;
+      top: -140px;
+      background-size: cover;
+      min-height: 200px;
+      position: relative;
+      margin-bottom: -160px;
     }
   `;
 
