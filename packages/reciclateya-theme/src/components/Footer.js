@@ -101,7 +101,7 @@ const Footer = ({ state }) => {
                   reciclateyusalabici@gmail.com
                 </a>
                 <br />
-                <a href="facebook.com/reciclateya">Facebook</a>
+                <a href="https://www.facebook.com/reciclateya">Facebook</a>
               </div>
             </li>
           </ul>
