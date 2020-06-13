@@ -40,7 +40,11 @@ const settings = {
           colors: {
             yellow: "#FFE607",
             softYellow: "#FFF9D8",
+            darkYellow: "#FFD807",
             dark: "#27214D",
+          },
+          effects: {
+            transition: "all 0.5s",
           },
         },
       },
