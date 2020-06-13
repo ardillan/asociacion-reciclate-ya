@@ -84,6 +84,8 @@ const Header = ({ state, actions }) => {
       /* Mobile */
       @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
         padding: 20px 20px 0px 10px;
+        background-size: 1000px 70px;
+        min-height: 50px;
       }
       `}
     >
