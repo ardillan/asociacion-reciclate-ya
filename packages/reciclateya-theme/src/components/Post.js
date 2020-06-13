@@ -22,6 +22,7 @@ const Post = ({ state, libraries }) => {
       width: 280px;
       border-radius: 5px;
       object-fit: cover;
+      object-position: top;
     }
 
     div:first-of-type {
@@ -55,7 +56,6 @@ const Post = ({ state, libraries }) => {
         width: 100%;
         border-radius: 5px;
         object-fit: contain;
-        object-position: top;
       }
     }
 
