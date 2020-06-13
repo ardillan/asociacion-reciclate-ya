@@ -21,7 +21,7 @@ const Link = ({ state, href, actions, children, type }) => {
           transition: ${state.theme.effects.transition};
 
           :hover {
-            transform: scale(115%) rotate(-5deg);
+            transform: scale(1.2) rotate(-5deg);
             background: ${state.theme.colors.darkYellow};
           }
         `;
@@ -42,7 +42,7 @@ const Link = ({ state, href, actions, children, type }) => {
           transition: ${state.theme.effects.transition};
 
           :hover {
-            transform: scale(105%) rotate(-2deg);
+            transform: scale(1.1) rotate(-2deg);
             background: ${state.theme.colors.darkYellow};
           }
         `;
