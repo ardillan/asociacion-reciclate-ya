@@ -10,8 +10,9 @@ const PostsList = ({ state, libraries }) => {
     libraries.source.populate({ response, state });
   });
 
-  const keys = Object.keys(state.source.post);
-  const posts = state.source.post;
+  const posts = Object.values(state.source.post).sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
 
   const Html2React = libraries.html2react.Component;
 
@@ -118,12 +119,12 @@ const PostsList = ({ state, libraries }) => {
         </div>
       </PostHeader>
       <Items>
-        {keys.map((id) => {
+        {posts.map((post) => {
           return (
-            <Link href={posts[id].link} key={id}>
-              <h2>{renderText(posts[id].title.rendered)}</h2>
-              <date>Escrito el {formatDate(posts[id].date)}</date>
-              <Html2React html={posts[id].excerpt.rendered} />
+            <Link href={post.link} key={post.id}>
+              <h2>{renderText(post.title.rendered)}</h2>
+              <date>Escrito el {formatDate(post.date)}</date>
+              <Html2React html={post.excerpt.rendered} />
             </Link>
           );
         })}
