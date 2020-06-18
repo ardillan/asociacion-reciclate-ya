@@ -122,9 +122,7 @@ const PostsList = ({ state, libraries }) => {
         {posts.map((post) => {
           return (
             <Link href={post.link} key={post.id}>
-              <h2>
-                {renderText(post.title.rendered)} {post.id}
-              </h2>
+              <h2>{renderText(post.title.rendered)}</h2>
               <date>Escrito el {formatDate(post.date)}</date>
               <Html2React html={post.excerpt.rendered} />
             </Link>
