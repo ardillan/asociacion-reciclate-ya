@@ -13,6 +13,10 @@ import Theme from "./Theme";
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
 
+  const posts = Object.values(state.source.post).sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+
   return (
     <>
       <Theme />
@@ -20,7 +24,7 @@ const Root = ({ state }) => {
       <main>
         <Switch>
           {/* <Loading when={data.isFetching} /> */}
-          <Home when={data.isHome} posts={state.source.post} />
+          <Home when={data.isHome} posts={posts} />
           <Post when={data.isPost && data.route != "/blog/"} />
           <Page when={data.isPage && data.route != "/blog/"} />
           <Blog when={data.route === "/blog/"} />

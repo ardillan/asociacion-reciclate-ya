@@ -1,7 +1,7 @@
 import React from "react";
 import { connect, styled, css } from "frontity";
 import Link from "./Link";
-import { renderText } from "../utils/helpers";
+import { renderText, formatDate } from "../utils/helpers";
 
 import Footer from "./Footer";
 import Separator from "../components/structure/Separator";
@@ -24,6 +24,10 @@ const Home = ({ state, posts }) => {
     h2 {
       font-size: 25px;
       font-weight: 600;
+    }
+
+    date {
+      font-size: 14px;
     }
 
     p {
@@ -249,6 +253,7 @@ const Home = ({ state, posts }) => {
           return (
             <Link href={posts[id].link} key={id}>
               <h2>{renderText(posts[id].title.rendered)}</h2>
+              <date>Escrito el {formatDate(posts[id].date)}</date>
               <div
                 dangerouslySetInnerHTML={{
                   __html: posts[id].excerpt.rendered,
