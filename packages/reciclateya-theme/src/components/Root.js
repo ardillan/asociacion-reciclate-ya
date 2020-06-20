@@ -6,6 +6,7 @@ import Home from "./Home";
 import Post from "./Post";
 import Page from "./Page";
 import Blog from "./Blog";
+import Error from "./Error";
 import Header from "./Header";
 import Theme from "./Theme";
 // import Loading from "./Loading";
@@ -28,6 +29,7 @@ const Root = ({ state }) => {
           <Post when={data.isPost && data.route != "/blog/"} />
           <Page when={data.isPage && data.route != "/blog/"} />
           <Blog when={data.route === "/blog/"} />
+          <Error when={data.is404} />
         </Switch>
       </main>
     </>
