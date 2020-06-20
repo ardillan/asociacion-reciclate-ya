@@ -80,6 +80,12 @@ const Footer = ({ state }) => {
 
   const BottomLine = styled.div`
     text-align: center;
+    a {
+      :hover {
+        text-decoration-color: ${state.theme.colors.yellow};
+        text-decoration-thickness: 3px;
+      }
+    }
   `;
 
   return (
