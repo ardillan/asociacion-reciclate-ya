@@ -60,6 +60,12 @@ const Header = ({ state, actions }) => {
       font-family: "Barlow";
       font-weight: 600;
       padding-right: 20px;
+
+      :hover {
+        text-decoration: underline;
+        text-decoration-color: ${state.theme.colors.yellow};
+        text-decoration-thickness: 3px;
+      }
     }
 
     /* Mobile */
