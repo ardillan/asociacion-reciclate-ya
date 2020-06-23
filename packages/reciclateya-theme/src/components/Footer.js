@@ -32,7 +32,7 @@ const Footer = ({ state }) => {
     ul {
       padding: 0;
       display: grid;
-      grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+      grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
       grid-gap: 20px;
       text-align: center;
     }
