@@ -1,13 +1,16 @@
 import React from "react";
-import { Global, css } from "frontity";
+import { Global, css, connect } from "frontity";
 import Fonts from "./Fonts";
 
-const Theme = () => {
+const Theme = ({ state }) => {
   return (
     <>
       <Fonts />
       <Global
         styles={css`
+          ::selection {
+            background: ${state.theme.colors.yellow};
+          }
           body {
             font-family: "Noticia Text";
             font-weight: 400;
@@ -31,4 +34,4 @@ const Theme = () => {
   );
 };
 
-export default Theme;
+export default connect(Theme);
