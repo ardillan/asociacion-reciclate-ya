@@ -76,6 +76,7 @@ const Link = ({ state, href, actions, children, type }) => {
         onClick={(event) => {
           event.preventDefault();
           actions.router.set(href);
+          actions.theme.closeMenu();
         }}
       >
         {children}
