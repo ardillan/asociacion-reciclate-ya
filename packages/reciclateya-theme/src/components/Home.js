@@ -276,6 +276,10 @@ const Home = ({ state, posts }) => {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            :hover {
+              background: ${state.theme.colors.darkYellow};
+            }
           `}
         >
           <Link href="/blog/">Ver más entradas</Link>
