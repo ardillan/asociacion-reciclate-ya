@@ -138,11 +138,15 @@ const Post = ({ state, libraries }) => {
               <Html2React html={post.excerpt.rendered} />
             </div>
           </PostHeader>
-          <Separator />
-          <Html2React html={renderText(post.content.rendered)} />
-          <Separator position="right" icon="walker" />
         </PageContainer>
       </Container>
+      <Separator />
+      <Container>
+        <PageContainer>
+          <Html2React html={renderText(post.content.rendered)} />
+        </PageContainer>
+      </Container>
+      <Separator position="right" icon="walker" />
 
       <Footer />
     </>

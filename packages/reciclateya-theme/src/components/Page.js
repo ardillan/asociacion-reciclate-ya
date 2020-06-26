@@ -127,13 +127,17 @@ const Post = ({ state, libraries }) => {
               <img src={bikeImage} />
             </div>
           </PostHeader>
-          <Separator />
+        </PostContainer>
+      </Container>
+      <Separator />
+      <Container>
+        <PostContainer>
           <PostContent>
             <Html2React html={post.content.rendered} />
           </PostContent>
-          <Separator position="right" icon="walker" />
         </PostContainer>
       </Container>
+      <Separator position="right" icon="walker" />
 
       <Footer />
     </>
