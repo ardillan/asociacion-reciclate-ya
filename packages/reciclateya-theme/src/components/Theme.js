@@ -1,10 +1,16 @@
 import React from "react";
-import { Global, css, connect } from "frontity";
+import { Global, css, connect, Head } from "frontity";
 import Fonts from "./Fonts";
 
 const Theme = ({ state }) => {
   return (
     <>
+      <Head>
+        <title>{state.frontity.title}</title>
+        <meta name="description" content={state.frontity.description} />
+        <html lang="es" />
+        <link rel="canonical" href={state.router.link} />
+      </Head>
       <Fonts />
       <Global
         styles={css`
