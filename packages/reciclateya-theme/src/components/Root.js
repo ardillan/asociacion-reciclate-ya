@@ -9,7 +9,7 @@ import Blog from "./Blog";
 import Error from "./Error";
 import Header from "./Header";
 import Theme from "./Theme";
-// import Loading from "./Loading";
+import Loading from "./Loading";
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -24,7 +24,7 @@ const Root = ({ state }) => {
       <Header />
       <main>
         <Switch>
-          {/* <Loading when={data.isFetching} /> */}
+          <Loading when={data.isFetching} />
           <Home when={data.isHome} posts={posts} />
           <Post when={data.isPost && data.route != "/blog/"} />
           <Page when={data.isPage && data.route != "/blog/"} />
