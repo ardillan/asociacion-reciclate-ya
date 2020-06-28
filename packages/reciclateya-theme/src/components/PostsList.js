@@ -123,7 +123,7 @@ const PostsList = ({ state, libraries }) => {
           return (
             <Link href={post.link} key={post.id}>
               <h2>{renderText(post.title.rendered)}</h2>
-              <date>Escrito el {formatDate(post.date)}</date>
+              <time>Escrito el {formatDate(post.date)}</time>
               <Html2React html={post.excerpt.rendered} />
             </Link>
           );

@@ -253,7 +253,7 @@ const Home = ({ state, posts }) => {
           return (
             <Link href={posts[id].link} key={id}>
               <h2>{renderText(posts[id].title.rendered)}</h2>
-              <date>Escrito el {formatDate(posts[id].date)}</date>
+              <time>Escrito el {formatDate(posts[id].date)}</time>
               <div
                 dangerouslySetInnerHTML={{
                   __html: posts[id].excerpt.rendered,

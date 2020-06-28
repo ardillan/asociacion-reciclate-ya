@@ -127,14 +127,14 @@ const Post = ({ state, libraries }) => {
               <h1>
                 <Html2React html={post.title.rendered} />
               </h1>
-              <date
+              <time
                 css={css`
                   font-size: 16px;
                   padding: 20px 0;
                 `}
               >
                 Escrito el {formatDate(post.date)}
-              </date>
+              </time>
               <Html2React html={post.excerpt.rendered} />
             </div>
           </PostHeader>
