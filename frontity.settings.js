@@ -26,10 +26,6 @@ const settings = {
       state: {
         theme: {
           menu: [],
-          featured: {
-            showOnList: false,
-            showOnPost: false,
-          },
           screenSizes: {
             desktop: "1200px",
             tablet: "768px",
