@@ -205,6 +205,25 @@ const Home = ({ state, posts }) => {
     }
   `;
 
+  const MorePostsButton = styled.div`
+    background: #ffe607;
+    width: 160px;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+    max-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :hover {
+      background: ${state.theme.colors.darkYellow};
+    }
+  `;
+
   const keys = Object.keys(posts);
 
   let stickyPosts = [];
@@ -263,28 +282,9 @@ const Home = ({ state, posts }) => {
             </Link>
           );
         })}
-        <div
-          css={css`
-            background: #ffe607;
-            width: 160px;
-            text-transform: uppercase;
-            font-size: 13px;
-            text-align: center;
-            font-weight: 600;
-            padding: 5px 0;
-            position: relative;
-            max-height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            :hover {
-              background: ${state.theme.colors.darkYellow};
-            }
-          `}
-        >
+        <MorePostsButton>
           <Link href="/blog/">Ver más entradas</Link>
-        </div>
+        </MorePostsButton>
       </Items>
       <Separator />
       <DescriptionContent>
