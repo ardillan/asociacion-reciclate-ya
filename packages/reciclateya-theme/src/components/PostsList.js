@@ -2,7 +2,6 @@ import React from "react";
 import { connect, styled, css } from "frontity";
 import Link from "./Link";
 import { renderText, formatDate } from "../utils/helpers";
-import bikeImage from "../../assets/images/home_cover.png";
 
 const PostsList = ({ state, libraries }) => {
   const fetchPosts = libraries.source.api.get({ endpoint: "posts" });
@@ -107,17 +106,6 @@ const PostsList = ({ state, libraries }) => {
 
   return (
     <>
-      <PostHeader>
-        <div>
-          <h1>¡Nuestro blog!</h1>
-          <p>
-            A continuación se muestra un listado con todas nuestras entradas.
-          </p>
-        </div>
-        <div>
-          <img src={bikeImage} />
-        </div>
-      </PostHeader>
       <Items>
         {posts.map((post) => {
           return (
