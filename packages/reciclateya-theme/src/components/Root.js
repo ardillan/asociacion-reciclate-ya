@@ -6,6 +6,7 @@ import Home from "./Home";
 import Post from "./Post";
 import Page from "./Page";
 import Blog from "./Blog";
+import BikeTrips from "./BikeTrips";
 import Error from "./Error";
 import Header from "./Header";
 import Theme from "./Theme";
@@ -27,8 +28,15 @@ const Root = ({ state }) => {
           <Loading when={data.isFetching} />
           <Home when={data.isHome} posts={posts} />
           <Post when={data.isPost && data.route != "/blog/"} />
-          <Page when={data.isPage && data.route != "/blog/"} />
+          <Page
+            when={
+              data.isPage && data.route != "/blog/" && data.route != "/salidas/"
+            }
+          />
           <Blog when={data.route === "/blog/"} />
+          <BikeTrips
+            when={data.route === "/salidas/" && data.route != "/blog/"}
+          />
           <Error when={data.is404} />
         </Switch>
       </main>
