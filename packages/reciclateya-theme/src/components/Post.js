@@ -76,6 +76,9 @@ const Post = ({ state, libraries }) => {
     width: ${state.theme.screenSizes.pageContainer};
     margin: auto;
 
+    img {
+      max-width: 100%;
+    }
     .wp-block-coblocks-gallery-collage {
       ul {
         margin: 0;
