@@ -34,6 +34,16 @@ const Theme = ({ state }) => {
           h6 {
             font-family: "Barlow";
           }
+
+          figcaption {
+            text-align: center;
+            font-size: 16px;
+            background: #fff;
+            width: auto;
+            margin-top: 20px;
+            font-family: "Barlow";
+            text-transform: uppercase;
+          }
         `}
       />
     </>
