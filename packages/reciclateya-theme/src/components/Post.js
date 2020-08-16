@@ -78,6 +78,9 @@ const Post = ({ state, libraries }) => {
 
     img {
       max-width: 100%;
+      border: 1px solid #f0f0f0;
+      box-shadow: 0 14px 28px rgb(212, 218, 234),
+        0 10px 10px rgba(206, 206, 206, 0.22);
     }
     .wp-block-coblocks-gallery-collage {
       ul {
