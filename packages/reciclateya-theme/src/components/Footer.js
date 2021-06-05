@@ -110,8 +110,6 @@ const Footer = ({ state }) => {
             <li>
               <div>
                 <h3>Contacto</h3>
-                <a href="tel:648115693">648 11 56 93</a>
-                <br />
                 <a href="mailto:reciclateyusalabici@gmail.com?subject=Recíclate%20YA%20|%20Contacto%20desde%20la%20web">
                   reciclateyusalabici@gmail.com
                 </a>
