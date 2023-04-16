@@ -12,9 +12,9 @@ const BreadCrumbs = ({ state, data }) => {
       font-weight: 600;
     }
 
-    a {
-      word-break: break-all;
+    span > a {
       background: white;
+      word-break: break-all;
       color: initial;
       &:hover {
         text-decoration: underline;
@@ -37,7 +37,9 @@ const BreadCrumbs = ({ state, data }) => {
     <BreadCrumbsContainer>
       {data.map((value, key) => (
         <span key={key}>
-          <Link href={`${value.link}`}>{value.text}</Link>
+          <Link className="item" href={`${value.link}`}>
+            {value.text}
+          </Link>
           <span
             css={css`
               color: #ffe607;
