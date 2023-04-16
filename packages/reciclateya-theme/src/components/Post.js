@@ -63,7 +63,6 @@ const Post = ({ state, libraries }) => {
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
       width: auto;
       grid-template-columns: 1fr;
-
       img {
         height: auto;
         width: 100%;
@@ -100,15 +99,41 @@ const Post = ({ state, libraries }) => {
       }
     }
 
-    /* Tablet */
-    @media screen and (min-width: ${state.theme.screenSizes
-        .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+    a {
+      word-break: break-all;
+      background: #fff9d2;
+      color: initial;
+    }
+
+    blockquote {
+      background: color(srgb 1 0.8979 0.03 / 0.23);
+      border-left: 10px solid color(srgb 1 0.9024 0.0244);
+      padding: 20px 20px 40px 40px;
+      margin: 0px;
       width: auto;
+      max-width: 100%;
+
+      cite {
+        font-size: 16px;
+        font-weight: 600;
+        color: #484759;
+      }
+    }
+
+    /* Tablet */
+    @media screen and (min-width: ${state.theme.screenSizes.mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+      width: 100%;
     }
 
     /* Mobile */
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
-      width: auto;
+      width: 100%;
+        figure {
+          margin: 0;
+          padding: 0;
+        }
+
+      }
     }
   `;
   return (

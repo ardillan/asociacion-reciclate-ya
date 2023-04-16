@@ -12,6 +12,15 @@ const BreadCrumbs = ({ state, data }) => {
       font-weight: 600;
     }
 
+    a {
+      word-break: break-all;
+      background: white;
+      color: initial;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     /* Tablet */
     @media screen and (min-width: ${state.theme.screenSizes
         .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
