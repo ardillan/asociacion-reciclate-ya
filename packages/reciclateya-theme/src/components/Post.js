@@ -78,6 +78,7 @@ const Post = ({ state, libraries }) => {
     img {
       max-width: 100%;
       border: 1px solid #f0f0f0;
+      height: auto;
       box-shadow: 0 14px 28px rgb(212, 218, 234),
         0 10px 10px rgba(206, 206, 206, 0.22);
     }
@@ -109,7 +110,7 @@ const Post = ({ state, libraries }) => {
       background: color(srgb 1 0.8979 0.03 / 0.23);
       border-left: 10px solid color(srgb 1 0.9024 0.0244);
       padding: 20px 20px 40px 40px;
-      margin: 0px;
+      margin: 0px 0px 2rem 0px;
       width: auto;
       max-width: 100%;
 
