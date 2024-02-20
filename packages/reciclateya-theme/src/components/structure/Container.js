@@ -14,6 +14,7 @@ const Container = ({ state, children, styles }) => {
       width: auto;
       grid-template-columns: 1fr;
       padding: 20px;
+      display: flex;
     }
 
     /* Mobile */
@@ -21,6 +22,7 @@ const Container = ({ state, children, styles }) => {
       width: auto;
       grid-template-columns: 1fr;
       padding: 20px;
+      display: flex;
     }
   `;
 

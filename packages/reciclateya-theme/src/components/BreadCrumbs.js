@@ -12,6 +12,15 @@ const BreadCrumbs = ({ state, data }) => {
       font-weight: 600;
     }
 
+    span > a {
+      background: white;
+      word-break: break-all;
+      color: initial;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     /* Tablet */
     @media screen and (min-width: ${state.theme.screenSizes
         .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
@@ -28,7 +37,9 @@ const BreadCrumbs = ({ state, data }) => {
     <BreadCrumbsContainer>
       {data.map((value, key) => (
         <span key={key}>
-          <Link href={`${value.link}`}>{value.text}</Link>
+          <Link className="item" href={`${value.link}`}>
+            {value.text}
+          </Link>
           <span
             css={css`
               color: #ffe607;
