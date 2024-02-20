@@ -6,9 +6,6 @@
   "keywords": [
     "frontity"
   ],
-  "engines": {
-    "node": "16.x"
-  },
   "scripts": {
     "dev": "frontity dev",
     "build": "NODE_OPTIONS=--openssl-legacy-provider frontity build",
